@@ -6,24 +6,23 @@ const data = fs
 
 const getFuel = item => Math.floor(item / 3) - 2;
 
-let result = data.reduce((acc, item) => {
-  acc += getFuel(item);
-  return acc;
-}, 0);
-
-console.log(result);
-
-result = data.reduce((acc, item) => {
-  const value = getFuel(item);
-  let extraFuelTotal = 0;
+const getExtraFuel = value => {
+  let extraFuelTotal = value;
   let extraFuel = getFuel(value);
   while (extraFuel > 0) {
     extraFuelTotal += extraFuel;
     extraFuel = getFuel(extraFuel);
   }
-  acc += value + extraFuelTotal;
 
-  return acc;
-}, 0);
+  return extraFuelTotal;
+};
 
-console.log(result);
+const results = data.reduce(
+  ([f, ef], item) => {
+    const value = getFuel(item);
+    return [f + value, ef + getExtraFuel(value)];
+  },
+  [0, 0]
+);
+
+console.log(results);
