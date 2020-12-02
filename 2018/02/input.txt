@@ -1,4 +1,4 @@
-module.exports = `fonbsmjyqugrapsczckghtvdxl
+fonbsmjyqugrapsczckghtvdxl
 fonpsmjyquwrnpeczikghtvdxw
 fonbsmdymuwrapexzikghtvdxl
 fonwsmjyquwrapeczikghttdpl
@@ -247,4 +247,4 @@ fonbsmjyqzwrajeczikghtldxl
 fonbsmjyruwrapexzmkghtvdxl
 fonbsmjyquwrdpeczikxstvdxl
 fonbsmjyquwrapeezivghtvdql
-fonbdmjyqujsapeczikghtvdxl`;
+fonbdmjyqujsapeczikghtvdxl

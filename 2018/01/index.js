@@ -1,7 +1,5 @@
-const input = require("./input");
+const operations = require("../../utils/getInput")(__dirname, { split: "\n" });
 //const input = `+7, +7, -2, -7, -4`.replace(/, /g, "\n");
-
-const operations = input.split("\n");
 
 const result = operations.reduce((acc, item) => {
   acc = eval(`${acc} + ${item}`);

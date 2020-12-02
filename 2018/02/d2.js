@@ -1,13 +1,13 @@
-const input = require("./input");
+const input = require("../../utils/getInput")(__dirname);
 const ids = input.split("\n");
 
 const removeLetter = (str, i) => str.slice(0, i) + str.slice(i + 1, str.length);
 
 const inCommon = ids
-  .map(id => {
+  .map((id) => {
     const { length } = id;
     const result = ids
-      .map(iId => {
+      .map((iId) => {
         if (id === iId) {
           return false;
         }
@@ -20,12 +20,12 @@ const inCommon = ids
           i++;
         }
       })
-      .filter(a => a);
+      .filter((a) => a);
 
     if (result.length) {
       return result[0];
     }
   })
-  .filter(a => a);
+  .filter((a) => a);
 
 console.log([...new Set(inCommon)][0]);
