@@ -1,12 +1,10 @@
-const fs = require("fs");
-const data = fs
-  .readFileSync("./input.txt", "UTF-8")
-  .split("\n")
-  .map(a => parseInt(a, 10));
+const data = require("../../utils/getInput")(__dirname, {
+  split: "\n",
+}).map((a) => parseInt(a, 10));
 
-const getFuel = item => Math.floor(item / 3) - 2;
+const getFuel = (item) => Math.floor(item / 3) - 2;
 
-const getExtraFuel = value => {
+const getExtraFuel = (value) => {
   let extraFuelTotal = value;
   let extraFuel = getFuel(value);
   while (extraFuel > 0) {

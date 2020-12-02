@@ -1,16 +1,17 @@
-const fs = require("fs");
 const interSections = require("./intersections");
 const ops = require("./ops");
-const data = fs.readFileSync("./input.txt", "UTF-8").split("\n");
+const data = require("../../utils/getInput")(__dirname, {
+  split: "\n",
+});
 const cableA = data[0].split(",");
 const cableB = data[1].split(",");
 
 const initial = {
   x: 0,
-  y: 0
+  y: 0,
 };
 
-const calculateJourney = arr =>
+const calculateJourney = (arr) =>
   arr.reduce((acc, dir) => {
     const length = parseInt(dir.slice(1, dir.length), 10);
     const previous = (acc[acc.length - 1] && acc[acc.length - 1][1]) || initial;
