@@ -1,7 +1,0 @@
-{
-	"preset": "mdcs",
-	"requirePaddingNewlinesInBlocks": null,
-	"requireLineFeedAtFileEnd": null,
-	"requirePaddingNewLinesAfterUseStrict": true,
-	"requireSpacesInsideParentheses": "allButNested"
-}
