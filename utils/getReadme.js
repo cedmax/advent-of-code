@@ -6,6 +6,8 @@ const fse = require("fs-extra");
 process.chdir(__dirname);
 const startYear = 2015;
 
+const indexTemplate = `const input = require("../../utils/getInput")(__dirname, { split: null });\n\nconsole.log(input)\nconsole.log('METHOD NOT IMPLEMENTED')`;
+
 const defaultOptions = {
   method: "get",
   headers: {
@@ -52,6 +54,11 @@ const fetch = async (day, year) => {
   const input = `../${year}/${day.toString().padStart(2, "0")}/input.txt`;
   if (!fse.pathExistsSync(input)) {
     await getInput(year, day, input);
+  }
+
+  const index = `../${year}/${day.toString().padStart(2, "0")}/index.js`;
+  if (!fse.pathExistsSync(index)) {
+    await fse.outputFile(index, indexTemplate);
   }
 };
 
