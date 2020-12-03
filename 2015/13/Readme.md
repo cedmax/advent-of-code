@@ -24,3 +24,7 @@ Carol       Alice
 </code></pre>
 <p>After trying every other seating arrangement in this hypothetical scenario, you find that this one is the most optimal, with a total change in happiness of <code>330</code>.</p>
 <p>What is the <em>total change in happiness</em> for the optimal seating arrangement of the actual guest list?</p>
+
+<h2 id="part2">--- Part Two ---</h2><p>In all the commotion, you realize that you forgot to seat yourself.  At this point, you&apos;re pretty apathetic toward the whole thing, and your happiness wouldn&apos;t really go up or down regardless of who you sit next to.  You assume everyone else would be just as ambivalent about sitting next to you, too.</p>
+<p>So, add yourself to the list, and give all happiness relationships that involve you a score of <code>0</code>.</p>
+<p>What is the <em>total change in happiness</em> for the optimal seating arrangement that actually includes yourself?</p>

@@ -1,29 +1,30 @@
 var input = require("../../utils/getInput")(__dirname);
 
-var nums = input.match(/[-\d]+/g);
+var nums = input.match(/[-\d]+/g).map((i) => parseInt(i, 10));
 console.log(
   nums.reduce(function (a, item) {
-    return parseInt(a, 10) + parseInt(item, 10);
+    return a + item;
   }, 0)
 );
 
-while (
-  input.match(
-    /\{(?:[^\{\}]+\{[^\{\}]*\})*[^\{\}]+:"red"(?:[^\{\}]+\{[^\{\}]*\})*[^\{\}]*\}/g
-  )
-) {
-  input = input.replace(
-    /\{(?:[^\{\}]+\{[^\{\}]*\})*[^\{\}]+:"red"(?:[^\{\}]+\{[^\{\}]*\})*[^\{\}]*\}/g,
-    null
-  );
-}
+var recursive = function (portion) {
+  if (portion instanceof Array) {
+    return portion.reduce((a, b) => a + recursive(b), 0);
+  }
+  if (typeof portion === "string") {
+    return 0;
+  }
+  if (typeof portion === "number") {
+    return portion;
+  }
+  if (typeof portion === "object") {
+    if (Object.values(portion).includes("red")) {
+      return 0;
+    }
+    return Object.values(portion).reduce((acc, value) => {
+      return acc + recursive(value);
+    }, 0);
+  }
+};
 
-nums = input.match(/[-\d]+/g);
-
-console.log(
-  nums.reduce(function (a, item) {
-    return parseInt(a, 10) + parseInt(item, 10);
-  }, 0)
-);
-
-// \{(?:[^\{\}]*(:"red")[^\{\}]*)|
+console.log(recursive(JSON.parse(input)));

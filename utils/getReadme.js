@@ -46,10 +46,7 @@ const getInput = async (year, day, file) => {
 
 const fetch = async (day, year) => {
   const readme = `../${year}/${day.toString().padStart(2, "0")}/Readme.md`;
-
-  if (!fse.pathExistsSync(readme)) {
-    await getReadme(year, day, readme);
-  }
+  await getReadme(year, day, readme);
 
   const input = `../${year}/${day.toString().padStart(2, "0")}/input.txt`;
   if (!fse.pathExistsSync(input)) {
