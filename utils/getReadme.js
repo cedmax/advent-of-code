@@ -62,11 +62,11 @@ const fetch = async (day, year) => {
 (async () => {
   const date = new Date();
   const currentYear = date.getFullYear();
-  for (let year = startYear; year < currentYear; year++) {
-    for (let day = 1; day <= 25; day++) {
-      await fetch(day, year);
-    }
-  }
+  // for (let year = startYear; year < currentYear; year++) {
+  //   for (let day = 1; day <= 25; day++) {
+  //     await fetch(day, year);
+  //   }
+  // }
 
   if (date.getMonth() === 11) {
     for (let day = 1; day <= date.getDate(); day++) {
