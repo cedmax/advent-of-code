@@ -1,5 +1,4 @@
-const input = require("../../utils/getInput")(__dirname)
-  .split("\n")
+const input = require("../../utils/getInput")(__dirname, { split: "\n" })
   .map((line) =>
     /([A-Za-z]+) can fly (\d+) km\/s for (\d+) seconds, but then must rest for (\d+) seconds\./.exec(
       line
@@ -14,8 +13,6 @@ const input = require("../../utils/getInput")(__dirname)
 
     return acc;
   }, {});
-
-console.log(input);
 
 const totalKm = (raceLength, duration, rest, speed) => {
   const cycleLength = duration + rest;
