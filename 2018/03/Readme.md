@@ -35,3 +35,7 @@
 </code></pre>
 <p>The four square inches marked with <code>X</code> are claimed by <em>both <code>1</code> and <code>2</code></em>. (Claim <code>3</code>, while adjacent to the others, does not overlap either of them.)</p>
 <p>If the Elves all proceed with their own plans, none of them will have enough fabric. <em>How many square inches of fabric are within two or more claims?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>Amidst the chaos, you notice that exactly one claim doesn&apos;t overlap by even a single square inch of fabric with any other claim. If you can somehow draw attention to it, maybe the Elves will be able to make Santa&apos;s suit after all!</p>
+<p>For example, in the claims above, only claim <code>3</code> is intact after all claims are made.</p>
+<p><em>What is the ID of the only claim that doesn&apos;t overlap?</em></p>
