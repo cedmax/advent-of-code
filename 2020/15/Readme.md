@@ -31,3 +31,15 @@
 <li>Given the starting numbers <code>3,1,2</code>, the <code>2020</code>th number spoken is <code>1836</code>.</li>
 </ul>
 <p>Given your starting numbers, <em>what will be the <code>2020</code>th number spoken?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>Impressed, the Elves issue you a challenge: determine the <code>30000000</code>th number spoken. For example, given the same starting numbers as above:</p>
+<ul>
+<li>Given <code>0,3,6</code>, the <code>30000000</code>th number spoken is <code>175594</code>.</li>
+<li>Given <code>1,3,2</code>, the <code>30000000</code>th number spoken is <code>2578</code>.</li>
+<li>Given <code>2,1,3</code>, the <code>30000000</code>th number spoken is <code>3544142</code>.</li>
+<li>Given <code>1,2,3</code>, the <code>30000000</code>th number spoken is <code>261214</code>.</li>
+<li>Given <code>2,3,1</code>, the <code>30000000</code>th number spoken is <code>6895259</code>.</li>
+<li>Given <code>3,2,1</code>, the <code>30000000</code>th number spoken is <code>18</code>.</li>
+<li>Given <code>3,1,2</code>, the <code>30000000</code>th number spoken is <code>362</code>.</li>
+</ul>
+<p>Given your starting numbers, <em>what will be the <code>30000000</code>th number spoken?</em></p>
