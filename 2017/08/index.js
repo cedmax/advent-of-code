@@ -1,5 +1,5 @@
 const input = require("../../utils/getInput")(__dirname, {
-  split: "\n",
+  split: "\n"
 });
 
 const memory = input.reduce((acc, line) => {

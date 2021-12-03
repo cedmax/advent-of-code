@@ -1,5 +1,5 @@
 const input = require("../../utils/getInput")(__dirname, {
-  split: "\t",
+  split: "\t"
 }).map((i) => parseInt(i, 10));
 const seen = [];
 let last = [...input];

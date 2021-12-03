@@ -1,5 +1,5 @@
 let input = require("../../utils/getInput")(__dirname, {
-  split: "\n",
+  split: "\n"
 }).map((i) => parseInt(i, 10));
 
 let i = 0;
@@ -15,7 +15,7 @@ while (i < input.length) {
 console.log(steps);
 
 input = require("../../utils/getInput")(__dirname, {
-  split: "\n",
+  split: "\n"
 }).map((i) => parseInt(i, 10));
 
 i = 0;

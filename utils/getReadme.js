@@ -6,13 +6,13 @@ const fse = require("fs-extra");
 process.chdir(__dirname);
 const startYear = 2015;
 
-const indexTemplate = `const input = require("../../utils/getInput")(__dirname, { split: null });\n\nconsole.log(input)\nconsole.log('METHOD NOT IMPLEMENTED')`;
+const indexTemplate = `const input = require('../../utils/getInput')(__dirname, { split: null });\n\nconsole.log(input)\nconsole.log('METHOD NOT IMPLEMENTED')`;
 
 const defaultOptions = {
   method: "get",
   headers: {
-    Cookie: "session=" + process.env.COOKIE,
-  },
+    Cookie: "session=" + process.env.COOKIE
+  }
 };
 
 const getReadme = async (year, day, file) => {
@@ -20,7 +20,7 @@ const getReadme = async (year, day, file) => {
 
   const { data } = await axios({
     url: `https://adventofcode.com/${year}/day/${day}`,
-    ...defaultOptions,
+    ...defaultOptions
   });
 
   const $ = cheerio.load(data);
@@ -38,7 +38,7 @@ const getInput = async (year, day, file) => {
   const { data: input } = await axios({
     url: `https://adventofcode.com/${year}/day/${day}/input`,
     responseType: "arraybuffer",
-    ...defaultOptions,
+    ...defaultOptions
   });
 
   await fse.outputFile(file, input.toString().replace(/\n*$/, ""));

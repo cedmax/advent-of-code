@@ -1,8 +1,6 @@
 const input = require("../../utils/getInput")(__dirname, { split: "\n" });
 
-const rows = input
-  .filter((rows) => !!rows)
-  .map((row) => row.split(/\t/).map(parseFloat));
+const rows = input.filter((rows) => !!rows).map((row) => row.split(/\t/).map(parseFloat));
 
 const step1 = rows.reduce((acc, row) => {
   return acc + Math.max(...row) - Math.min(...row);

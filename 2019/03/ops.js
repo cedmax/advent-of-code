@@ -3,28 +3,28 @@ module.exports = {
     { x, y },
     {
       x: x + val,
-      y
-    }
+      y,
+    },
   ],
   L: ({ x, y }, val) => [
     { x, y },
     {
       x: x - val,
-      y
-    }
+      y,
+    },
   ],
   U: ({ x, y }, val) => [
     { x, y },
     {
       x,
-      y: y + val
-    }
+      y: y + val,
+    },
   ],
   D: ({ x, y }, val) => [
     { x, y },
     {
       x,
-      y: y - val
-    }
-  ]
+      y: y - val,
+    },
+  ],
 };

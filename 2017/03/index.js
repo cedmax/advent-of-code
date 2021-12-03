@@ -48,7 +48,7 @@ const steps = ([y, x]) => ({
   topright: [y - 1, x + 1],
   topleft: [y - 1, x - 1],
   bottomleft: [y + 1, x - 1],
-  bottomright: [y + 1, x + 1],
+  bottomright: [y + 1, x + 1]
 });
 const order = ["right", "top", "left", "bottom"];
 const orderDiag = ["topright", "topleft", "bottomleft", "bottomright"];
@@ -104,14 +104,12 @@ const calc = (matrixArray, coords) => {
   // console.log({mov: movement[direction], sum:sum || 1, diag})
   return {
     mov: movement[direction],
-    sum: (sum || 1) + diag,
+    sum: (sum || 1) + diag
   };
 };
 
 let next = 1;
-const matrixArray = [...new Array(11)].map(() =>
-  [...new Array(11)].map(() => 0)
-);
+const matrixArray = [...new Array(11)].map(() => [...new Array(11)].map(() => 0));
 center = 10 / 2;
 let coords = [center, center];
 matrixArray[center][center] = next;

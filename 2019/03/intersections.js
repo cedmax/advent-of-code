@@ -23,7 +23,7 @@ module.exports = function checkIntersection(
   if (uA >= 0 && uA <= 1 && uB >= 0 && uB <= 1) {
     return intersecting({
       x: x1 + uA * (x2 - x1),
-      y: y1 + uA * (y2 - y1)
+      y: y1 + uA * (y2 - y1),
     });
   }
 

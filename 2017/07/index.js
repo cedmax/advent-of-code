@@ -1,5 +1,5 @@
 const input = require("../../utils/getInput")(__dirname, {
-  split: "\n",
+  split: "\n"
 });
 // const input = `pbga (66)
 // xhth (57)
@@ -29,9 +29,7 @@ const inputsSupporting = input
     { keys: [], held: [] }
   );
 
-var holder = inputsSupporting.keys.filter(
-  (e) => !inputsSupporting.held.includes(e)
-);
+var holder = inputsSupporting.keys.filter((e) => !inputsSupporting.held.includes(e));
 console.log(holder);
 
 const inpW = input.reduce((acc, tower) => {
