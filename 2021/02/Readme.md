@@ -5,8 +5,8 @@
 <li><code>down X</code> <em>increases</em> the depth by <code>X</code> units.</li>
 <li><code>up X</code> <em>decreases</em> the depth by <code>X</code> units.</li>
 </ul>
-<p>Note that since you&apos;re on a submarine, <code>down</code> and <code>up</code> affect your <em>depth</em>, and so they have the opposite result of what you might expect.</p>
-<p>The submarine seems to already have a planned course (your puzzle input). You should probably figure out where it&apos;s going. For example:</p>
+<p>Note that since you're on a submarine, <code>down</code> and <code>up</code> affect your <em>depth</em>, and so they have the opposite result of what you might expect.</p>
+<p>The submarine seems to already have a planned course (your puzzle input). You should probably figure out where it's going. For example:</p>
 <pre><code>forward 5
 down 5
 forward 8
@@ -26,8 +26,8 @@ forward 2
 <p>After following these instructions, you would have a horizontal position of <code>15</code> and a depth of <code>10</code>. (Multiplying these together produces <code><em>150</em></code>.)</p>
 <p>Calculate the horizontal position and depth you would have after following the planned course. <em>What do you get if you multiply your final horizontal position by your final depth?</em></p>
 
-<h2 id="part2">--- Part Two ---</h2><p>Based on your calculations, the planned course doesn&apos;t seem to make any sense. You find the submarine manual and discover that the process is actually slightly more complicated.</p>
-<p>In addition to horizontal position and depth, you&apos;ll also need to track a third value, <em>aim</em>, which also starts at <code>0</code>. The commands also mean something entirely different than you first thought:</p>
+<h2 id="part2">--- Part Two ---</h2><p>Based on your calculations, the planned course doesn't seem to make any sense. You find the submarine manual and discover that the process is actually slightly more complicated.</p>
+<p>In addition to horizontal position and depth, you'll also need to track a third value, <em>aim</em>, which also starts at <code>0</code>. The commands also mean something entirely different than you first thought:</p>
 <ul>
 <li><code>down X</code> <em>increases</em> your aim by <code>X</code> units.</li>
 <li><code>up X</code> <em>decreases</em> your aim by <code>X</code> units.</li>
@@ -36,7 +36,7 @@ forward 2
   <li>It increases your depth by your aim <em>multiplied by</em> <code>X</code>.</li>
 </ul></li>
 </ul>
-<p>Again note that since you&apos;re on a submarine, <code>down</code> and <code>up</code> do the opposite of what you might expect: &quot;down&quot; means aiming in the positive direction.</p>
+<p>Again note that since you're on a submarine, <code>down</code> and <code>up</code> do the opposite of what you might expect: "down" means aiming in the positive direction.</p>
 <p>Now, the above example does something different:</p>
 <ul>
 <li><code>forward 5</code> adds <code>5</code> to your horizontal position, a total of <code>5</code>. Because your aim is <code>0</code>, your depth does not change.</li>
