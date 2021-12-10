@@ -1,12 +1,12 @@
-<h2>--- Day 16: Dragon Checksum ---</h2><p>You&apos;re done scanning this part of the network, but you&apos;ve left traces of your presence. You need to <span title="If I ever find one of my disks overwritten with a dragon curve, I&apos;ll know it was you.">overwrite some disks</span> with random-looking data to cover your tracks and update the local security system with a new checksum for those disks.</p>
-<p>For the data to not be suspicious, it needs to have certain properties; purely random data will be detected as tampering. To generate appropriate random data, you&apos;ll need to use a modified <a href="https://en.wikipedia.org/wiki/Dragon_curve">dragon curve</a>.</p>
-<p>Start with an appropriate initial state (your puzzle input). Then, so long as you don&apos;t have enough data yet to fill the disk, repeat the following steps:</p>
+<h2>--- Day 16: Dragon Checksum ---</h2><p>You're done scanning this part of the network, but you've left traces of your presence. You need to <span title="If I ever find one of my disks overwritten with a dragon curve, I'll know it was you.">overwrite some disks</span> with random-looking data to cover your tracks and update the local security system with a new checksum for those disks.</p>
+<p>For the data to not be suspicious, it needs to have certain properties; purely random data will be detected as tampering. To generate appropriate random data, you'll need to use a modified <a href="https://en.wikipedia.org/wiki/Dragon_curve">dragon curve</a>.</p>
+<p>Start with an appropriate initial state (your puzzle input). Then, so long as you don't have enough data yet to fill the disk, repeat the following steps:</p>
 <ul>
-<li>Call the data you have at this point &quot;a&quot;.</li>
-<li>Make a copy of &quot;a&quot;; call this copy &quot;b&quot;.</li>
-<li>Reverse the order of the characters in &quot;b&quot;.</li>
-<li>In &quot;b&quot;, replace all instances of <code>0</code> with <code>1</code> and all <code>1</code>s with <code>0</code>.</li>
-<li>The resulting data is &quot;a&quot;, then a single <code>0</code>, then &quot;b&quot;.</li>
+<li>Call the data you have at this point "a".</li>
+<li>Make a copy of "a"; call this copy "b".</li>
+<li>Reverse the order of the characters in "b".</li>
+<li>In "b", replace all instances of <code>0</code> with <code>1</code> and all <code>1</code>s with <code>0</code>.</li>
+<li>The resulting data is "a", then a single <code>0</code>, then "b".</li>
 </ul>
 <p>For example, after a single step of this process,</p>
 <ul>

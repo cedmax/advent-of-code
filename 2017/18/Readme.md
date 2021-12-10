@@ -1,8 +1,8 @@
-<h2>--- Day 18: Duet ---</h2><p>You discover a tablet containing some strange assembly code labeled simply &quot;<a href="https://en.wikipedia.org/wiki/Duet">Duet</a>&quot;. Rather than bother the sound card with it, you decide to run the code yourself. Unfortunately, you don&apos;t see any documentation, so you&apos;re left to figure out what the instructions mean on your own.</p>
+<h2>--- Day 18: Duet ---</h2><p>You discover a tablet containing some strange assembly code labeled simply "<a href="https://en.wikipedia.org/wiki/Duet">Duet</a>". Rather than bother the sound card with it, you decide to run the code yourself. Unfortunately, you don't see any documentation, so you're left to figure out what the instructions mean on your own.</p>
 <p>It seems like the assembly is meant to operate on a set of <em>registers</em> that are each named with a single letter and that can each hold a single <a href="https://en.wikipedia.org/wiki/Integer">integer</a>. You suppose each register should start with a value of <code>0</code>.</p>
-<p>There aren&apos;t that many instructions, so it shouldn&apos;t be hard to figure out what they do.  Here&apos;s what you determine:</p>
+<p>There aren't that many instructions, so it shouldn't be hard to figure out what they do.  Here's what you determine:</p>
 <ul>
-<li><code>snd X</code> <em><span title="I don&apos;t recommend actually trying this.">plays a sound</span></em> with a frequency equal to the value of <code>X</code>.</li>
+<li><code>snd X</code> <em><span title="I don't recommend actually trying this.">plays a sound</span></em> with a frequency equal to the value of <code>X</code>.</li>
 <li><code>set X Y</code> <em>sets</em> register <code>X</code> to the value of <code>Y</code>.</li>
 <li><code>add X Y</code> <em>increases</em> register <code>X</code> by the value of <code>Y</code>.</li>
 <li><code>mul X Y</code> sets register <code>X</code> to the result of <em>multiplying</em> the value contained in register <code>X</code> by the value of <code>Y</code>.</li>

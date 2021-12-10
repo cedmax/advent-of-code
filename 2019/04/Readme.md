@@ -1,4 +1,4 @@
-<h2>--- Day 4: Secure Container ---</h2><p>You arrive at the Venus fuel depot only to discover it&apos;s protected by a password.  The Elves had written the password on a sticky note, but someone <span title="Look on the bright side - isn&apos;t it more secure if nobody knows the password?">threw it out</span>.</p>
+<h2>--- Day 4: Secure Container ---</h2><p>You arrive at the Venus fuel depot only to discover it's protected by a password.  The Elves had written the password on a sticky note, but someone <span title="Look on the bright side - isn't it more secure if nobody knows the password?">threw it out</span>.</p>
 <p>However, they do remember a few key facts about the password:</p>
 <ul>
 <li>It is a six-digit number.</li>

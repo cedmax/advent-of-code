@@ -1,4 +1,4 @@
-<h2>--- Day 10: The Stars Align ---</h2><p>It&apos;s no use; your navigation system simply isn&apos;t capable of providing <span title="At the iceberg, use any lane to turn left. Then, swim for eight thousand miles.">walking directions</span> in the arctic circle, and certainly not in 1018.</p>
+<h2>--- Day 10: The Stars Align ---</h2><p>It's no use; your navigation system simply isn't capable of providing <span title="At the iceberg, use any lane to turn left. Then, swim for eight thousand miles.">walking directions</span> in the arctic circle, and certainly not in 1018.</p>
 <p>The Elves suggest an alternative. In times like these, North Pole rescue operations will arrange points of light in the sky to guide missing Elves back to base. Unfortunately, the message is easy to miss: the points move slowly enough that it takes hours to align them, but have so much momentum that they only stay aligned for a second. If you blink at the wrong time, it might be hours before another message appears.</p>
 <p>You can see these points of light floating in the distance, and record their position in the sky and their velocity, the relative change in position per second (your puzzle input). The coordinates are all given from your perspective; given enough time, those positions and velocities will move the points into a cohesive message!</p>
 <p>Rather than wait, you decide to fast-forward the process and calculate what the points will eventually spell.</p>
@@ -36,7 +36,7 @@ position=&lt;14,  7&gt; velocity=&lt;-2,  0&gt;
 position=&lt;-3,  6&gt; velocity=&lt; 2, -1&gt;
 </code></pre>
 <p>Each line represents one point. Positions are given as <code>&lt;X, Y&gt;</code> pairs: X represents how far left (negative) or right (positive) the point appears, while Y represents how far up (negative) or down (positive) the point appears.</p>
-<p>At <code>0</code> seconds, each point has the position given. Each second, each point&apos;s velocity is added to its position. So, a point with velocity <code>&lt;1, -2&gt;</code> is moving to the right, but is moving upward twice as quickly. If this point&apos;s initial position were <code>&lt;3, 9&gt;</code>, after <code>3</code> seconds, its position would become <code>&lt;6, 3&gt;</code>.</p>
+<p>At <code>0</code> seconds, each point has the position given. Each second, each point's velocity is added to its position. So, a point with velocity <code>&lt;1, -2&gt;</code> is moving to the right, but is moving upward twice as quickly. If this point's initial position were <code>&lt;3, 9&gt;</code>, after <code>3</code> seconds, its position would become <code>&lt;6, 3&gt;</code>.</p>
 <p>Over time, the points listed above would move like this:</p>
 <pre><code>Initially:
 ........#.............

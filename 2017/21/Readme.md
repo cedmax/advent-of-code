@@ -11,7 +11,7 @@
 <li>Otherwise, the size is evenly divisible by <code>3</code>; break the pixels up into <code>3x3</code> squares, and convert each <code>3x3</code> square into a <code>4x4</code> square by following the corresponding <em>enhancement rule</em>.</li>
 </ul>
 <p>Because each square of pixels is replaced by a larger one, the image gains pixels and so its <em>size</em> increases.</p>
-<p>The artist&apos;s book of enhancement rules is nearby (your puzzle input); however, it seems to be missing rules.  The artist explains that sometimes, one must <em>rotate</em> or <em>flip</em> the input pattern to find a match. (Never rotate or flip the output pattern, though.) Each pattern is written concisely: rows are listed as single units, ordered top-down, and separated by slashes. For example, the following rules correspond to the adjacent patterns:</p>
+<p>The artist's book of enhancement rules is nearby (your puzzle input); however, it seems to be missing rules.  The artist explains that sometimes, one must <em>rotate</em> or <em>flip</em> the input pattern to find a match. (Never rotate or flip the output pattern, though.) Each pattern is written concisely: rows are listed as single units, ordered top-down, and separated by slashes. For example, the following rules correspond to the adjacent patterns:</p>
 <pre><code>../.#  =  ..
           .#
 

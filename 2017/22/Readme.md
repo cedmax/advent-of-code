@@ -13,7 +13,7 @@
 #..
 ...
 </code></pre>
-<p>Then, the middle of the infinite grid looks like this, with the virus carrier&apos;s position marked with <code>[ ]</code>:</p>
+<p>Then, the middle of the infinite grid looks like this, with the virus carrier's position marked with <code>[ ]</code>:</p>
 <pre><code>. . . . . . . . .
 . . . . . . . . .
 . . . . . . . . .

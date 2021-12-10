@@ -1,5 +1,5 @@
-<h2>--- Day 12: Rain Risk ---</h2><p>Your ferry made decent progress toward the island, but the storm came in <span title="At least it wasn&apos;t a Category Six!">faster than anyone expected</span>. The ferry needs to take <em>evasive actions</em>!</p>
-<p>Unfortunately, the ship&apos;s navigation computer seems to be malfunctioning; rather than giving a route directly to safety, it produced extremely circuitous instructions. When the captain uses the <a href="https://en.wikipedia.org/wiki/Public_address_system" target="_blank">PA system</a> to ask if anyone can help, you quickly volunteer.</p>
+<h2>--- Day 12: Rain Risk ---</h2><p>Your ferry made decent progress toward the island, but the storm came in <span title="At least it wasn't a Category Six!">faster than anyone expected</span>. The ferry needs to take <em>evasive actions</em>!</p>
+<p>Unfortunately, the ship's navigation computer seems to be malfunctioning; rather than giving a route directly to safety, it produced extremely circuitous instructions. When the captain uses the <a href="https://en.wikipedia.org/wiki/Public_address_system" target="_blank">PA system</a> to ask if anyone can help, you quickly volunteer.</p>
 <p>The navigation instructions (your puzzle input) consists of a sequence of single-character <em>actions</em> paired with integer input <em>values</em>. After staring at them for a few minutes, you work out what they probably mean:</p>
 <ul>
 <li>Action <em><code>N</code></em> means to move <em>north</em> by the given value.</li>
@@ -26,11 +26,11 @@ F11
 <li><code>R90</code> would cause the ship to turn right by 90 degrees and face <em>south</em>; it remains at <em>east 17, north 3</em>.</li>
 <li><code>F11</code> would move the ship 11 units south to <em>east 17, south 8</em>.</li>
 </ul>
-<p>At the end of these instructions, the ship&apos;s <a href="https://en.wikipedia.org/wiki/Manhattan_distance" target="_blank">Manhattan distance</a> (sum of the absolute values of its east/west position and its north/south position) from its starting position is <code>17 + 8</code> = <em><code>25</code></em>.</p>
-<p>Figure out where the navigation instructions lead. <em>What is the Manhattan distance between that location and the ship&apos;s starting position?</em></p>
+<p>At the end of these instructions, the ship's <a href="https://en.wikipedia.org/wiki/Manhattan_distance" target="_blank">Manhattan distance</a> (sum of the absolute values of its east/west position and its north/south position) from its starting position is <code>17 + 8</code> = <em><code>25</code></em>.</p>
+<p>Figure out where the navigation instructions lead. <em>What is the Manhattan distance between that location and the ship's starting position?</em></p>
 
 <h2 id="part2">--- Part Two ---</h2><p>Before you can give the destination to the captain, you realize that the actual action meanings were printed on the back of the instructions the whole time.</p>
-<p>Almost all of the actions indicate how to move a <em>waypoint</em> which is relative to the ship&apos;s position:</p>
+<p>Almost all of the actions indicate how to move a <em>waypoint</em> which is relative to the ship's position:</p>
 <ul>
 <li>Action <em><code>N</code></em> means to move the waypoint <em>north</em> by the given value.</li>
 <li>Action <em><code>S</code></em> means to move the waypoint <em>south</em> by the given value.</li>
@@ -49,5 +49,5 @@ F11
 <li><code>R90</code> rotates the waypoint around the ship clockwise 90 degrees, moving it to <em>4 units east and 10 units south of the ship</em>. The ship remains at <em>east 170, north 38</em>.</li>
 <li><code>F11</code> moves the ship to the waypoint 11 times (a total of <em>44 units east and 110 units south</em>), leaving the ship at <em>east 214, south 72</em>. The waypoint stays 4 units east and 10 units south of the ship.</li>
 </ul>
-<p>After these operations, the ship&apos;s Manhattan distance from its starting position is <code>214 + 72</code> = <em><code>286</code></em>.</p>
-<p>Figure out where the navigation instructions actually lead. <em>What is the Manhattan distance between that location and the ship&apos;s starting position?</em></p>
+<p>After these operations, the ship's Manhattan distance from its starting position is <code>214 + 72</code> = <em><code>286</code></em>.</p>
+<p>Figure out where the navigation instructions actually lead. <em>What is the Manhattan distance between that location and the ship's starting position?</em></p>

@@ -1,4 +1,4 @@
-<h2>--- Day 7: Handy Haversacks ---</h2><p>You land at the regional airport in time for your next flight. In fact, it looks like you&apos;ll even have time to grab some food: all flights are currently delayed due to <em>issues in luggage processing</em>.</p>
+<h2>--- Day 7: Handy Haversacks ---</h2><p>You land at the regional airport in time for your next flight. In fact, it looks like you'll even have time to grab some food: all flights are currently delayed due to <em>issues in luggage processing</em>.</p>
 <p>Due to recent aviation regulations, many rules (your puzzle input) are being enforced about bags and their contents; bags must be color-coded and must contain specific quantities of other color-coded bags. Apparently, nobody responsible for these regulations considered how long they would take to enforce!</p>
 <p>For example, consider the following rules:</p>
 <pre><code>light red bags contain 1 bright white bag, 2 muted yellow bags.
@@ -23,7 +23,7 @@ dotted black bags contain no other bags.
 <p>So, in this example, the number of bag colors that can eventually contain at least one <code>shiny gold</code> bag is <code><em>4</em></code>.</p>
 <p><em>How many bag colors can eventually contain at least one <code>shiny gold</code> bag?</em> (The list of rules is quite long; make sure you get all of it.)</p>
 
-<h2 id="part2">--- Part Two ---</h2><p>It&apos;s getting pretty expensive to fly these days - not because of ticket prices, but because of the ridiculous number of bags you need to buy!</p>
+<h2 id="part2">--- Part Two ---</h2><p>It's getting pretty expensive to fly these days - not because of ticket prices, but because of the ridiculous number of bags you need to buy!</p>
 <p>Consider again your <code>shiny gold</code> bag and the rules from the above example:</p>
 <ul>
 <li><code>faded blue</code> bags contain <code>0</code> other bags.</li>
@@ -33,7 +33,7 @@ dotted black bags contain no other bags.
 </ul>
 <p>So, a single <code>shiny gold</code> bag must contain 1 <code>dark olive</code> bag (and the 7 bags within it) plus 2 <code>vibrant plum</code> bags (and the 11 bags within <em>each</em> of those): <code>1 + 1*7 + 2 + 2*11</code> = <code><em>32</em></code> bags!</p>
 <p>Of course, the actual rules have a <span title="100%">small</span> chance of going several levels deeper than this example; be sure to count all of the bags, even if the nesting becomes topologically impractical!</p>
-<p>Here&apos;s another example:</p>
+<p>Here's another example:</p>
 <pre><code>shiny gold bags contain 2 dark red bags.
 dark red bags contain 2 dark orange bags.
 dark orange bags contain 2 dark yellow bags.

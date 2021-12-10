@@ -1,5 +1,5 @@
-<h2>--- Day 17: Reservoir Research ---</h2><p>You arrive in the year 18. If it weren&apos;t for <span title="Continuity!">the coat</span> you got in 1018, you would be very cold: the North Pole base hasn&apos;t even been constructed.</p>
-<p>Rather, it hasn&apos;t been constructed <em>yet</em>.  The Elves are making a little progress, but there&apos;s not a lot of liquid water in this climate, so they&apos;re getting very dehydrated.  Maybe there&apos;s more underground?</p>
+<h2>--- Day 17: Reservoir Research ---</h2><p>You arrive in the year 18. If it weren't for <span title="Continuity!">the coat</span> you got in 1018, you would be very cold: the North Pole base hasn't even been constructed.</p>
+<p>Rather, it hasn't been constructed <em>yet</em>.  The Elves are making a little progress, but there's not a lot of liquid water in this climate, so they're getting very dehydrated.  Maybe there's more underground?</p>
 <p>You scan a two-dimensional vertical slice of the ground nearby and discover that it is mostly <em>sand</em> with veins of <em>clay</em>.  The scan only provides data with a granularity of <em>square meters</em>, but it should be good enough to determine how much water is trapped there. In the scan, <code>x</code> represents the distance to the right, and <code>y</code> represents the distance down. There is also a <em>spring of water</em> near the surface at <code>x=500, y=0</code>. The scan identifies <em>which square meters are clay</em> (your puzzle input).</p>
 <p>For example, suppose your scan shows the following veins of clay:</p>
 <pre><code>x=495, y=2..7
@@ -47,7 +47,7 @@ y=13, x=498..504
 ....#.....#...
 ....#######...
 </code></pre>
-<p>Two squares of water can&apos;t occupy the same location.  If another five squares of water are created, they will settle on the first five, filling the clay reservoir a little more:</p>
+<p>Two squares of water can't occupy the same location.  If another five squares of water are created, they will settle on the first five, filling the clay reservoir a little more:</p>
 <pre><code>......+.......
 ......|.....#.
 .#..#.|.....#.

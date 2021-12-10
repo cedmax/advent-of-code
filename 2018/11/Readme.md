@@ -1,11 +1,11 @@
 <h2>--- Day 11: Chronal Charge ---</h2><p>You watch the Elves and their sleigh fade into the distance as they head toward the North Pole.</p>
-<p>Actually, you&apos;re the one fading. The <span title="wheeeeeeeeeeeeeeeeee">falling sensation</span> returns.</p>
-<p>The low fuel warning light is illuminated on your wrist-mounted device. Tapping it once causes it to project a hologram of the situation: a <em>300x300</em> grid of fuel cells and their current power levels, some negative. You&apos;re not sure what negative power means in the context of time travel, but it can&apos;t be good.</p>
+<p>Actually, you're the one fading. The <span title="wheeeeeeeeeeeeeeeeee">falling sensation</span> returns.</p>
+<p>The low fuel warning light is illuminated on your wrist-mounted device. Tapping it once causes it to project a hologram of the situation: a <em>300x300</em> grid of fuel cells and their current power levels, some negative. You're not sure what negative power means in the context of time travel, but it can't be good.</p>
 <p>Each fuel cell has a coordinate ranging <em>from 1 to 300</em> in both the X (horizontal) and Y (vertical) direction.  In <code>X,Y</code> notation, the top-left cell is <code>1,1</code>, and the top-right cell is <code>300,1</code>.</p>
 <p>The interface lets you select <em>any 3x3 square</em> of fuel cells. To increase your chances of getting to your destination, you decide to choose the 3x3 square with the <em>largest total power</em>.</p>
 <p>The power level in a given fuel cell can be found through the following process:</p>
 <ul>
-<li>Find the fuel cell&apos;s <em>rack ID</em>, which is its <em>X coordinate plus 10</em>.</li>
+<li>Find the fuel cell's <em>rack ID</em>, which is its <em>X coordinate plus 10</em>.</li>
 <li>Begin with a power level of the <em>rack ID</em> times the <em>Y coordinate</em>.</li>
 <li>Increase the power level by the value of the <em>grid serial number</em> (your puzzle input).</li>
 <li>Set the power level to itself multiplied by the <em>rack ID</em>.</li>
@@ -24,9 +24,9 @@
 <p>So, the power level of this fuel cell is <code><em>4</em></code>.</p>
 <p>Here are some more example power levels:</p>
 <ul>
-<li>Fuel cell at &#xA0;<code>122,79</code>, grid serial number <code>57</code>: power level <code>-5</code>.</li>
-<li>Fuel cell at <code>217,196</code>, grid serial number <code>39</code>: power level &#xA0;<code>0</code>.</li>
-<li>Fuel cell at <code>101,153</code>, grid serial number <code>71</code>: power level &#xA0;<code>4</code>.</li>
+<li>Fuel cell at &nbsp;<code>122,79</code>, grid serial number <code>57</code>: power level <code>-5</code>.</li>
+<li>Fuel cell at <code>217,196</code>, grid serial number <code>39</code>: power level &nbsp;<code>0</code>.</li>
+<li>Fuel cell at <code>101,153</code>, grid serial number <code>71</code>: power level &nbsp;<code>4</code>.</li>
 </ul>
 <p>Your goal is to find the 3x3 square which has the largest total power. The square must be entirely within the 300x300 grid. Identify this square using the <code>X,Y</code> coordinate of its <em>top-left fuel cell</em>. For example:</p>
 <p>For grid serial number <code>18</code>, the largest total 3x3 square has a top-left corner of <code><em>33,45</em></code> (with a total power of <code>29</code>); these fuel cells appear in the middle of this 5x5 region:</p>
@@ -36,7 +36,7 @@
  1  <em> 1   2   4  </em>-3
 -1   0   2  -5  -2
 </code></pre>
-<p>For grid serial number <code>42</code>, the largest 3x3 square&apos;s top-left is <code><em>21,61</em></code> (with a total power of <code>30</code>); they are in the middle of this region:</p>
+<p>For grid serial number <code>42</code>, the largest 3x3 square's top-left is <code><em>21,61</em></code> (with a total power of <code>30</code>); they are in the middle of this region:</p>
 <pre><code>-3   4   2   2   2
 -4  <em> 4   3   3  </em> 4
 -5  <em> 3   3   4  </em>-4

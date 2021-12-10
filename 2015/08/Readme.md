@@ -3,21 +3,21 @@
 <p>However, it is important to realize the difference between the number of characters <em>in the code representation of the string literal</em> and the number of characters <em>in the in-memory string itself</em>.</p>
 <p>For example:</p>
 <ul>
-<li><code>&quot;&quot;</code> is <code>2</code> characters of code (the two double quotes), but the string contains zero characters.</li>
-<li><code>&quot;abc&quot;</code> is <code>5</code> characters of code, but <code>3</code> characters in the string data.</li>
-<li><code>&quot;aaa\&quot;aaa&quot;</code> is <code>10</code> characters of code, but the string itself contains six &quot;a&quot; characters and a single, escaped quote character, for a total of <code>7</code> characters in the string data.</li>
-<li><code>&quot;\x27&quot;</code> is <code>6</code> characters of code, but the string itself contains just one - an apostrophe (<code>&apos;</code>), escaped using hexadecimal notation.</li>
+<li><code>""</code> is <code>2</code> characters of code (the two double quotes), but the string contains zero characters.</li>
+<li><code>"abc"</code> is <code>5</code> characters of code, but <code>3</code> characters in the string data.</li>
+<li><code>"aaa\"aaa"</code> is <code>10</code> characters of code, but the string itself contains six "a" characters and a single, escaped quote character, for a total of <code>7</code> characters in the string data.</li>
+<li><code>"\x27"</code> is <code>6</code> characters of code, but the string itself contains just one - an apostrophe (<code>'</code>), escaped using hexadecimal notation.</li>
 </ul>
-<p>Santa&apos;s list is a file that contains many double-quoted string literals, one on each line.  The only escape sequences used are <code>\\</code> (which represents a single backslash), <code>\&quot;</code> (which represents a lone double-quote character), and <code>\x</code> plus two hexadecimal characters (which represents a single character with that ASCII code).</p>
+<p>Santa's list is a file that contains many double-quoted string literals, one on each line.  The only escape sequences used are <code>\\</code> (which represents a single backslash), <code>\"</code> (which represents a lone double-quote character), and <code>\x</code> plus two hexadecimal characters (which represents a single character with that ASCII code).</p>
 <p>Disregarding the whitespace in the file, what is <em>the number of characters of code for string literals</em> minus <em>the number of characters in memory for the values of the strings</em> in total for the entire file?</p>
 <p>For example, given the four strings above, the total number of characters of string code (<code>2 + 5 + 10 + 6 = 23</code>) minus the total number of characters in memory for string values (<code>0 + 3 + 7 + 1 = 11</code>) is <code>23 - 11 = 12</code>.</p>
 
-<h2 id="part2">--- Part Two ---</h2><p>Now, let&apos;s go the other way.  In addition to finding the number of characters of code, you should now <em>encode each code representation as a new string</em> and find the number of characters of the new encoded representation, including the surrounding double quotes.</p>
+<h2 id="part2">--- Part Two ---</h2><p>Now, let's go the other way.  In addition to finding the number of characters of code, you should now <em>encode each code representation as a new string</em> and find the number of characters of the new encoded representation, including the surrounding double quotes.</p>
 <p>For example:</p>
 <ul>
-<li><code>&quot;&quot;</code> encodes to <code>&quot;\&quot;\&quot;&quot;</code>, an increase from <code>2</code> characters to <code>6</code>.</li>
-<li><code>&quot;abc&quot;</code> encodes to <code>&quot;\&quot;abc\&quot;&quot;</code>, an increase from <code>5</code> characters to <code>9</code>.</li>
-<li><code>&quot;aaa\&quot;aaa&quot;</code> encodes to <code>&quot;\&quot;aaa\\\&quot;aaa\&quot;&quot;</code>, an increase from <code>10</code> characters to <code>16</code>.</li>
-<li><code>&quot;\x27&quot;</code> encodes to <code>&quot;\&quot;\\x27\&quot;&quot;</code>, an increase from <code>6</code> characters to <code>11</code>.</li>
+<li><code>""</code> encodes to <code>"\"\""</code>, an increase from <code>2</code> characters to <code>6</code>.</li>
+<li><code>"abc"</code> encodes to <code>"\"abc\""</code>, an increase from <code>5</code> characters to <code>9</code>.</li>
+<li><code>"aaa\"aaa"</code> encodes to <code>"\"aaa\\\"aaa\""</code>, an increase from <code>10</code> characters to <code>16</code>.</li>
+<li><code>"\x27"</code> encodes to <code>"\"\\x27\""</code>, an increase from <code>6</code> characters to <code>11</code>.</li>
 </ul>
 <p>Your task is to find <em>the total number of characters to represent the newly encoded strings</em> minus <em>the number of characters of code in each original string literal</em>. For example, for the strings above, the total encoded length (<code>6 + 9 + 16 + 11 = 42</code>) minus the characters in the original code representation (<code>23</code>, just like in the first part of this puzzle) is <code>42 - 23 = 19</code>.</p>

@@ -1,5 +1,5 @@
-<h2>--- Day 13: Mine Cart Madness ---</h2><p>A crop of this size requires significant logistics to transport produce, soil, fertilizer, and so on. The Elves are very busy pushing things around in <em>carts</em> on some kind of rudimentary system of tracks they&apos;ve come up with.</p>
-<p>Seeing as how cart-and-track systems don&apos;t appear in recorded history for <span title="Time anomalies! How do they work?!">another 1000 years</span>, the Elves seem to be making this up as they go along. They haven&apos;t even figured out how to avoid collisions yet.</p>
+<h2>--- Day 13: Mine Cart Madness ---</h2><p>A crop of this size requires significant logistics to transport produce, soil, fertilizer, and so on. The Elves are very busy pushing things around in <em>carts</em> on some kind of rudimentary system of tracks they've come up with.</p>
+<p>Seeing as how cart-and-track systems don't appear in recorded history for <span title="Time anomalies! How do they work?!">another 1000 years</span>, the Elves seem to be making this up as they go along. They haven't even figured out how to avoid collisions yet.</p>
 <p>You map out the tracks (your puzzle input) and see where you can help.</p>
 <p>Tracks consist of straight paths (<code>|</code> and <code>-</code>), curves (<code>/</code> and <code>\</code>), and intersections (<code>+</code>). Curves connect exactly two perpendicular pieces of track; for example, this is a closed loop:</p>
 <pre><code>/----\
@@ -135,7 +135,7 @@ v  |  |  |  |
 \-+-/  \-+--/
   \------/   
 </code></pre>
-<p>After following their respective paths for a while, the carts eventually crash.  To help prevent crashes, you&apos;d like to know <em>the location of the first crash</em>. Locations are given in <code>X,Y</code> coordinates, where the furthest left column is <code>X=0</code> and the furthest top row is <code>Y=0</code>:</p>
+<p>After following their respective paths for a while, the carts eventually crash.  To help prevent crashes, you'd like to know <em>the location of the first crash</em>. Locations are given in <code>X,Y</code> coordinates, where the furthest left column is <code>X=0</code> and the furthest top row is <code>Y=0</code>:</p>
 <pre><code>           111
  0123456789012
 0/---\        

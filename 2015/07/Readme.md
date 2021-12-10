@@ -8,7 +8,7 @@
 <li><code>p LSHIFT 2 -&gt; q</code> means that the value from wire <code>p</code> is <a href="https://en.wikipedia.org/wiki/Logical_shift">left-shifted</a> by <code>2</code> and then provided to wire <code>q</code>.</li>
 <li><code>NOT e -&gt; f</code> means that the <a href="https://en.wikipedia.org/wiki/Bitwise_operation#NOT">bitwise complement</a> of the value from wire <code>e</code> is provided to wire <code>f</code>.</li>
 </ul>
-<p>Other possible gates include <code>OR</code> (<a href="https://en.wikipedia.org/wiki/Bitwise_operation#OR">bitwise OR</a>) and <code>RSHIFT</code> (<a href="https://en.wikipedia.org/wiki/Logical_shift">right-shift</a>).  If, for some reason, you&apos;d like to <em>emulate</em> the circuit instead, almost all programming languages (for example, <a href="https://en.wikipedia.org/wiki/Bitwise_operations_in_C">C</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">JavaScript</a>, or <a href="https://wiki.python.org/moin/BitwiseOperators">Python</a>) provide operators for these gates.</p>
+<p>Other possible gates include <code>OR</code> (<a href="https://en.wikipedia.org/wiki/Bitwise_operation#OR">bitwise OR</a>) and <code>RSHIFT</code> (<a href="https://en.wikipedia.org/wiki/Logical_shift">right-shift</a>).  If, for some reason, you'd like to <em>emulate</em> the circuit instead, almost all programming languages (for example, <a href="https://en.wikipedia.org/wiki/Bitwise_operations_in_C">C</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators">JavaScript</a>, or <a href="https://wiki.python.org/moin/BitwiseOperators">Python</a>) provide operators for these gates.</p>
 <p>For example, here is a simple circuit:</p>
 <pre><code>123 -&gt; x
 456 -&gt; y
@@ -29,6 +29,6 @@ i: 65079
 x: 123
 y: 456
 </code></pre>
-<p>In little Bobby&apos;s kit&apos;s instructions booklet (provided as your puzzle input), what signal is ultimately provided to <em>wire <code>a</code></em>?</p>
+<p>In little Bobby's kit's instructions booklet (provided as your puzzle input), what signal is ultimately provided to <em>wire <code>a</code></em>?</p>
 
 <h2 id="part2">--- Part Two ---</h2><p>Now, take the signal you got on wire <code>a</code>, override wire <code>b</code> to that signal, and reset the other wires (including wire <code>a</code>).  What new signal is ultimately provided to wire <code>a</code>?</p>

@@ -1,4 +1,4 @@
-<h2>--- Day 5: Doesn&apos;t He Have Intern-Elves For This? ---</h2><p>Santa needs help figuring out which strings in his text file are naughty or nice.</p>
+<h2>--- Day 5: Doesn't He Have Intern-Elves For This? ---</h2><p>Santa needs help figuring out which strings in his text file are naughty or nice.</p>
 <p>A <em>nice string</em> is one with all of the following properties:</p>
 <ul>
 <li>It contains at least three vowels (<code>aeiou</code> only), like <code>aei</code>, <code>xazegov</code>, or <code title="John Madden John Madden John Madden">aeiouaeiouaeiou</code>.</li>

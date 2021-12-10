@@ -1,6 +1,6 @@
 <h2>--- Day 15: Oxygen System ---</h2><p>Out here in deep space, many things can go wrong. Fortunately, many of those things have <span title="Which indicator lights indicate when the indicator lights have failed?">indicator lights</span>. Unfortunately, one of those lights is lit: the oxygen system for part of the ship has failed!</p>
 <p>According to the readouts, the oxygen system must have failed days ago after a rupture in oxygen tank two; that section of the ship was automatically sealed once oxygen levels went dangerously low. A single remotely-operated <em>repair droid</em> is your only option for fixing the oxygen system.</p>
-<p>The Elves&apos; care package included an <a href="9">Intcode</a> program (your puzzle input) that you can use to remotely control the repair droid. By running that program, you can direct the repair droid to the oxygen system and fix the problem.</p>
+<p>The Elves' care package included an <a href="9">Intcode</a> program (your puzzle input) that you can use to remotely control the repair droid. By running that program, you can direct the repair droid to the oxygen system and fix the problem.</p>
 <p>The remote control program executes the following steps in a loop forever:</p>
 <ul>
 <li>Accept a <em>movement command</em> via an input instruction.</li>
@@ -15,7 +15,7 @@
 <li><code>1</code>: The repair droid has moved one step in the requested direction.</li>
 <li><code>2</code>: The repair droid has moved one step in the requested direction; its new position is the location of the oxygen system.</li>
 </ul>
-<p>You don&apos;t know anything about the area around the repair droid, but you can figure it out by watching the status codes.</p>
+<p>You don't know anything about the area around the repair droid, but you can figure it out by watching the status codes.</p>
 <p>For example, we can draw the area using <code>D</code> for the droid, <code>#</code> for walls, <code>.</code> for locations the droid can traverse, and empty space for unexplored locations.  Then, the initial state looks like this:</p>
 <pre><code>      
       
@@ -23,7 +23,7 @@
       
       
 </code></pre>
-<p>To make the droid go north, send it <code>1</code>. If it replies with <code>0</code>, you know that location is a wall and that the droid didn&apos;t move:</p>
+<p>To make the droid go north, send it <code>1</code>. If it replies with <code>0</code>, you know that location is a wall and that the droid didn't move:</p>
 <pre><code>      
    #  
    D  
@@ -58,5 +58,5 @@
   D.# 
    #  
 </code></pre>
-<p>Now, because of the reply of <code>2</code>, you know you&apos;ve found the <em>oxygen system</em>! In this example, it was only <code><em>2</em></code> moves away from the repair droid&apos;s starting position.</p>
+<p>Now, because of the reply of <code>2</code>, you know you've found the <em>oxygen system</em>! In this example, it was only <code><em>2</em></code> moves away from the repair droid's starting position.</p>
 <p><em>What is the fewest number of movement commands</em> required to move the repair droid from its starting position to the location of the oxygen system?</p>

@@ -1,5 +1,5 @@
 <h2>--- Day 21: Chronal Conversion ---</h2><p>You should have been watching where you were going, because as you wander the new North Pole base, you trip and fall into a very deep hole!</p>
-<p><span title="The old time travel hole gag! Classic.">Just kidding.</span>  You&apos;re falling through time again.</p>
+<p><span title="The old time travel hole gag! Classic.">Just kidding.</span>  You're falling through time again.</p>
 <p>If you keep up your current pace, you should have resolved all of the temporal anomalies by the next time the device activates. Since you have very little interest in browsing history in 500-year increments for the rest of your life, you need to find a way to get back to your present time.</p>
 <p>After a little research, you discover two important facts about the behavior of the device:</p>
 <p>First, you discover that the device is hard-wired to always send you back in time in 500-year increments. Changing this is probably not feasible.</p>

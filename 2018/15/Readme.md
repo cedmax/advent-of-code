@@ -1,6 +1,6 @@
-<h2>--- Day 15: Beverage Bandits ---</h2><p>Having perfected their hot chocolate, the Elves have a new problem: the <a href="https://en.wikipedia.org/wiki/Goblin">Goblins</a> that live in these caves will do anything to steal it. Looks like they&apos;re here for a fight.</p>
+<h2>--- Day 15: Beverage Bandits ---</h2><p>Having perfected their hot chocolate, the Elves have a new problem: the <a href="https://en.wikipedia.org/wiki/Goblin">Goblins</a> that live in these caves will do anything to steal it. Looks like they're here for a fight.</p>
 <p>You scan the area, generating a map of the walls (<code>#</code>), open cavern (<code>.</code>), and starting position of every Goblin (<code>G</code>) and Elf (<code>E</code>) (your puzzle input).</p>
-<p>Combat proceeds in <em>rounds</em>; in each round, each unit that is still alive takes a <em>turn</em>, resolving all of its actions before the next unit&apos;s turn begins. On each unit&apos;s turn, it tries to <em>move</em> into range of an enemy (if it isn&apos;t already) and then <em>attack</em> (if it is in range).</p>
+<p>Combat proceeds in <em>rounds</em>; in each round, each unit that is still alive takes a <em>turn</em>, resolving all of its actions before the next unit's turn begins. On each unit's turn, it tries to <em>move</em> into range of an enemy (if it isn't already) and then <em>attack</em> (if it is in range).</p>
 <p>All units are very disciplined and always follow very strict combat rules. Units never move or attack diagonally, as doing so would be dishonorable. When multiple choices are equally valid, ties are broken in <em>reading order</em>: top-to-bottom, then left-to-right.  For instance, the order in which units take their turns within a round is the <em>reading order of their starting positions</em> in that round, regardless of the type of unit or whether other units have moved after the round started.  For example:</p>
 <pre><code>                 would take their
 These units:   turns in this order:
@@ -11,7 +11,7 @@ These units:   turns in this order:
   #######           #######
 </code></pre>
 <p>Each unit begins its turn by identifying all possible <em>targets</em> (enemy units). If no targets remain, combat ends.</p>
-<p>Then, the unit identifies all of the open squares (<code>.</code>) that are <em>in range</em> of each target; these are the squares which are <em>adjacent</em> (immediately up, down, left, or right) to any target and which aren&apos;t already occupied by a wall or another unit. Alternatively, the unit might <em>already</em> be in range of a target. If the unit is not already in range of a target, and there are no open squares which are in range of a target, the unit ends its turn.</p>
+<p>Then, the unit identifies all of the open squares (<code>.</code>) that are <em>in range</em> of each target; these are the squares which are <em>adjacent</em> (immediately up, down, left, or right) to any target and which aren't already occupied by a wall or another unit. Alternatively, the unit might <em>already</em> be in range of a target. If the unit is not already in range of a target, and there are no open squares which are in range of a target, the unit ends its turn.</p>
 <p>If the unit is already in range of a target, it does not <em>move</em>, but continues its turn with an <em>attack</em>. Otherwise, since it is not in range of a target, it <em>moves</em>.</p>
 <p>To <em>move</em>, the unit first considers the squares that are <em>in range</em> and determines <em>which of those squares it could reach in the fewest steps</em>. A <em>step</em> is a single movement to any <em>adjacent</em> (immediately up, down, left, or right) open (<code>.</code>) square. Units cannot move into walls or other units. The unit does this while considering the <em>current positions of units</em> and does <em>not</em> do any prediction about where units will be later. If the unit cannot reach (find an open path to) any of the squares that are in range, it ends its turn. If multiple squares are in range and <em>tied</em> for being reachable in the fewest steps, the square which is first in <em>reading order</em> is chosen. For example:</p>
 <pre><code>Targets:      In range:     Reachable:    Nearest:      Chosen:
@@ -36,8 +36,8 @@ These units:   turns in this order:
 #..?G?#       #..!G.#       #...G.#       #432G2#       #...G.#
 #######       #######       #######       #######       #######
 </code></pre>
-<p>The Elf sees three squares in range of a target (<code>?</code>), two of which are nearest (<code>!</code>), and so the first in reading order is chosen (<code>+</code>). Under &quot;Distance&quot;, each open square is marked with its distance from the destination square; the two squares to which the Elf could move on this turn (down and to the right) are both equally good moves and would leave the Elf <code>2</code> steps from being in range of the Goblin. Because the step which is first in reading order is chosen, the Elf moves <em>right</em> one square.</p>
-<p>Here&apos;s a larger example of movement:</p>
+<p>The Elf sees three squares in range of a target (<code>?</code>), two of which are nearest (<code>!</code>), and so the first in reading order is chosen (<code>+</code>). Under "Distance", each open square is marked with its distance from the destination square; the two squares to which the Elf could move on this turn (down and to the right) are both equally good moves and would leave the Elf <code>2</code> steps from being in range of the Goblin. Because the step which is first in reading order is chosen, the Elf moves <em>right</em> one square.</p>
+<p>Here's a larger example of movement:</p>
 <pre><code>Initially:
 #########
 #G..G..G#
@@ -95,10 +95,10 @@ G....  9       G....  9
 ..G..  2       ..G..  2  
 ...G.  1       ...G.  1  
 </code></pre>
-<p>The &quot;HP&quot; column shows the hit points of the Goblin to the left in the corresponding row. The Elf is in range of three targets: the Goblin above it (with <code>4</code> hit points), the Goblin to its right (with <code>2</code> hit points), and the Goblin below it (also with <code>2</code> hit points). Because three targets are in range, the ones with the lowest hit points are selected: the two Goblins with <code>2</code> hit points each (one to the right of the Elf and one below the Elf). Of those, the Goblin first in reading order (the one to the right of the Elf) is selected. The selected Goblin&apos;s hit points (<code>2</code>) are reduced by the Elf&apos;s attack power (<code>3</code>), reducing its hit points to <code>-1</code>, killing it.</p>
-<p>After attacking, the unit&apos;s turn ends.  Regardless of how the unit&apos;s turn ends, the next unit in the round takes its turn.  If all units have taken turns in this round, the round ends, and a new round begins.</p>
+<p>The "HP" column shows the hit points of the Goblin to the left in the corresponding row. The Elf is in range of three targets: the Goblin above it (with <code>4</code> hit points), the Goblin to its right (with <code>2</code> hit points), and the Goblin below it (also with <code>2</code> hit points). Because three targets are in range, the ones with the lowest hit points are selected: the two Goblins with <code>2</code> hit points each (one to the right of the Elf and one below the Elf). Of those, the Goblin first in reading order (the one to the right of the Elf) is selected. The selected Goblin's hit points (<code>2</code>) are reduced by the Elf's attack power (<code>3</code>), reducing its hit points to <code>-1</code>, killing it.</p>
+<p>After attacking, the unit's turn ends.  Regardless of how the unit's turn ends, the next unit in the round takes its turn.  If all units have taken turns in this round, the round ends, and a new round begins.</p>
 <p>The Elves look quite outnumbered.  You need to determine the <em>outcome</em> of the battle: the <em>number of full rounds that were completed</em> (not counting the round in which combat ends) multiplied by <em>the sum of the hit points of all remaining units</em> at the moment combat ends. (Combat only ends when a unit finds no targets during its turn.)</p>
-<p>Below is an entire sample combat. Next to each map, each row&apos;s units&apos; hit points are listed from left to right.</p>
+<p>Below is an entire sample combat. Next to each map, each row's units' hit points are listed from left to right.</p>
 <pre><code>Initially:
 #######   
 #.G...#   G(200)

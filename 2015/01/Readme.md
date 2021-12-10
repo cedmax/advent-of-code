@@ -1,7 +1,7 @@
-<h2>--- Day 1: Not Quite Lisp ---</h2><p>Santa was hoping for a white Christmas, but his weather machine&apos;s &quot;snow&quot; function is powered by stars, and he&apos;s fresh out!  To save Christmas, he needs you to collect <em class="star">fifty stars</em> by December 25th.</p>
-<p>Collect stars by helping Santa solve puzzles.  Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first.  Each puzzle grants <em class="star">one star</em>. <span title="Also, some puzzles contain Easter eggs like this one. Yes, I know it&apos;s not traditional to do Advent calendars for Easter.">Good luck!</span></p>
-<p>Here&apos;s an easy puzzle to warm you up.</p>
-<p>Santa is trying to deliver presents in a large apartment building, but he can&apos;t find the right floor - the directions he got are a little confusing. He starts on the ground floor (floor <code>0</code>) and then follows the instructions one character at a time.</p>
+<h2>--- Day 1: Not Quite Lisp ---</h2><p>Santa was hoping for a white Christmas, but his weather machine's "snow" function is powered by stars, and he's fresh out!  To save Christmas, he needs you to collect <em class="star">fifty stars</em> by December 25th.</p>
+<p>Collect stars by helping Santa solve puzzles.  Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first.  Each puzzle grants <em class="star">one star</em>. <span title="Also, some puzzles contain Easter eggs like this one. Yes, I know it's not traditional to do Advent calendars for Easter.">Good luck!</span></p>
+<p>Here's an easy puzzle to warm you up.</p>
+<p>Santa is trying to deliver presents in a large apartment building, but he can't find the right floor - the directions he got are a little confusing. He starts on the ground floor (floor <code>0</code>) and then follows the instructions one character at a time.</p>
 <p>An opening parenthesis, <code>(</code>, means he should go up one floor, and a closing parenthesis, <code>)</code>, means he should go down one floor.</p>
 <p>The apartment building is very tall, and the basement is very deep; he will never find the top or bottom floors.</p>
 <p>For example:</p>

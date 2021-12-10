@@ -1,6 +1,6 @@
 <h2>--- Day 8: Two-Factor Authentication ---</h2><p>You come across a door implementing what you can only assume is an implementation of <a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">two-factor authentication</a> after a long game of <a href="https://en.wikipedia.org/wiki/Requirement">requirements</a> <a href="https://en.wikipedia.org/wiki/Chinese_whispers">telephone</a>.</p>
 <p>To get past the door, you first swipe a keycard (no problem; there was one on a nearby desk). Then, it displays a code on a <a href="https://www.google.com/search?q=tiny+lcd&amp;tbm=isch">little screen</a>, and you type that code on a keypad. Then, presumably, the door unlocks.</p>
-<p>Unfortunately, the screen has been <span title="BUT BY WHOM?!">smashed</span>. After a few minutes, you&apos;ve taken everything apart and figured out how it works. Now you just have to work out what the screen <em>would</em> have displayed.</p>
+<p>Unfortunately, the screen has been <span title="BUT BY WHOM?!">smashed</span>. After a few minutes, you've taken everything apart and figured out how it works. Now you just have to work out what the screen <em>would</em> have displayed.</p>
 <p>The magnetic strip on the card you swiped encodes a series of instructions for the screen; these instructions are your puzzle input. The screen is <em><code>50</code> pixels wide and <code>6</code> pixels tall</em>, all of which start <em>off</em>, and is capable of three somewhat peculiar operations:</p>
 <ul>
 <li><code>rect AxB</code> turns <em>on</em> all of the pixels in a rectangle at the top-left of the screen which is <code>A</code> wide and <code>B</code> tall.</li>
@@ -22,5 +22,5 @@
 #.#....
 .#.....</code></pre></li>
 </ul>
-<p>As you can see, this display technology is extremely powerful, and will soon dominate the tiny-code-displaying-screen market.  That&apos;s what the advertisement on the back of the display tries to convince you, anyway.</p>
+<p>As you can see, this display technology is extremely powerful, and will soon dominate the tiny-code-displaying-screen market.  That's what the advertisement on the back of the display tries to convince you, anyway.</p>
 <p>There seems to be an intermediate check of the voltage used by the display: after you swipe your card, if the screen did work, <em>how many pixels should be lit?</em></p>

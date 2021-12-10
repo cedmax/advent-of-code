@@ -1,5 +1,5 @@
-<h2>--- Day 6: Universal Orbit Map ---</h2><p>You&apos;ve landed at the Universal Orbit Map facility on Mercury.  Because navigation in space often involves transferring between orbits, the orbit maps here are useful for finding efficient routes between, for example, you and Santa. You download a map of the local orbits (your puzzle input).</p>
-<p>Except for the universal Center of Mass (<code>COM</code>), every object in space is in orbit around <span title="What do you mean, Kerbal Space Program doesn&apos;t have accurate orbital physics?">exactly one other object</span>.  An <a href="https://en.wikipedia.org/wiki/Orbit">orbit</a> looks roughly like this:</p>
+<h2>--- Day 6: Universal Orbit Map ---</h2><p>You've landed at the Universal Orbit Map facility on Mercury.  Because navigation in space often involves transferring between orbits, the orbit maps here are useful for finding efficient routes between, for example, you and Santa. You download a map of the local orbits (your puzzle input).</p>
+<p>Except for the universal Center of Mass (<code>COM</code>), every object in space is in orbit around <span title="What do you mean, Kerbal Space Program doesn't have accurate orbital physics?">exactly one other object</span>.  An <a href="https://en.wikipedia.org/wiki/Orbit">orbit</a> looks roughly like this:</p>
 <pre><code>                  \
                    \
                     |
@@ -10,8 +10,8 @@ AAA--&gt; o            o &lt;--BBB
                    /
                   /
 </code></pre>
-<p>In this diagram, the object <code>BBB</code> is in orbit around <code>AAA</code>. The path that <code>BBB</code> takes around <code>AAA</code> (drawn with lines) is only partly shown. In the map data, this orbital relationship is written <code>AAA)BBB</code>, which means &quot;<code>BBB</code> is in orbit around <code>AAA</code>&quot;.</p>
-<p>Before you use your map data to plot a course, you need to make sure it wasn&apos;t corrupted during the download.  To verify maps, the Universal Orbit Map facility uses <em>orbit count checksums</em> - the total number of <em>direct orbits</em> (like the one shown above) and <em>indirect orbits</em>.</p>
+<p>In this diagram, the object <code>BBB</code> is in orbit around <code>AAA</code>. The path that <code>BBB</code> takes around <code>AAA</code> (drawn with lines) is only partly shown. In the map data, this orbital relationship is written <code>AAA)BBB</code>, which means "<code>BBB</code> is in orbit around <code>AAA</code>".</p>
+<p>Before you use your map data to plot a course, you need to make sure it wasn't corrupted during the download.  To verify maps, the Universal Orbit Map facility uses <em>orbit count checksums</em> - the total number of <em>direct orbits</em> (like the one shown above) and <em>indirect orbits</em>.</p>
 	<p>Whenever <code>A</code> orbits <code>B</code> and <code>B</code> orbits <code>C</code>, then <code>A</code> <em>indirectly orbits</em> <code>C</code>.  This chain can be any number of objects long: if <code>A</code> orbits <code>B</code>, <code>B</code> orbits <code>C</code>, and <code>C</code> orbits <code>D</code>, then <code>A</code> indirectly orbits <code>D</code>.
 </p><p>For example, suppose you have the following map:</p>
 <pre><code>COM)B

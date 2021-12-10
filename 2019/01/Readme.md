@@ -1,7 +1,7 @@
 <h2>--- Day 1: The Tyranny of the Rocket Equation ---</h2><p>Santa has become stranded at the edge of the Solar System while delivering presents to other planets! To accurately calculate his position in space, safely align his warp drive, and return to Earth in time to save Christmas, he needs you to bring him <span title="If only you had time to grab an astrolabe.">measurements</span> from <em class="star">fifty stars</em>.</p>
 <p>Collect stars by solving puzzles.  Two puzzles will be made available on each day in the Advent calendar; the second puzzle is unlocked when you complete the first.  Each puzzle grants <em class="star">one star</em>. Good luck!</p>
 <p>The Elves quickly load you into a spacecraft and prepare to launch.</p>
-<p>At the first Go / No Go poll, every Elf is Go until the Fuel Counter-Upper.  They haven&apos;t determined the amount of fuel required yet.</p>
+<p>At the first Go / No Go poll, every Elf is Go until the Fuel Counter-Upper.  They haven't determined the amount of fuel required yet.</p>
 <p>Fuel required to launch a given <em>module</em> is based on its <em>mass</em>.  Specifically, to find the fuel required for a module, take its mass, divide by three, round down, and subtract 2.</p>
 <p>For example:</p>
 <ul>

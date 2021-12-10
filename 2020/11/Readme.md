@@ -1,5 +1,5 @@
-<h2>--- Day 11: Seating System ---</h2><p>Your plane lands with plenty of time to spare. The final leg of your journey is a ferry that goes directly to the tropical island where you can finally start your vacation. As you reach the waiting area to board the ferry, you realize you&apos;re so early, nobody else has even arrived yet!</p>
-<p>By modeling the process people use to choose (or abandon) their seat in the waiting area, you&apos;re pretty sure you can predict the best place to sit. You make a quick map of the seat layout (your puzzle input).</p>
+<h2>--- Day 11: Seating System ---</h2><p>Your plane lands with plenty of time to spare. The final leg of your journey is a ferry that goes directly to the tropical island where you can finally start your vacation. As you reach the waiting area to board the ferry, you realize you're so early, nobody else has even arrived yet!</p>
+<p>By modeling the process people use to choose (or abandon) their seat in the waiting area, you're pretty sure you can predict the best place to sit. You make a quick map of the seat layout (your puzzle input).</p>
 <p>The seat layout fits neatly on a grid. Each position is either floor (<code>.</code>), an empty seat (<code>L</code>), or an occupied seat (<code>#</code>). For example, the initial seat layout might look like this:</p>
 <pre><code>L.LL.LL.LL
 LLLLLLL.LL
@@ -16,9 +16,9 @@ L.LLLLL.LL
 <ul>
 <li>If a seat is <em>empty</em> (<code>L</code>) and there are <em>no</em> occupied seats adjacent to it, the seat becomes <em>occupied</em>.</li>
 <li>If a seat is <em>occupied</em> (<code>#</code>) and <em>four or more</em> seats adjacent to it are also occupied, the seat becomes <em>empty</em>.</li>
-<li>Otherwise, the seat&apos;s state does not change.</li>
+<li>Otherwise, the seat's state does not change.</li>
 </ul>
-<p><span title="Floor... floor never changes.">Floor (<code>.</code>) never changes</span>; seats don&apos;t move, and nobody sits on the floor.</p>
+<p><span title="Floor... floor never changes.">Floor (<code>.</code>) never changes</span>; seats don't move, and nobody sits on the floor.</p>
 <p>After one round of these rules, every seat in the example layout becomes occupied:</p>
 <pre><code>#.##.##.##
 #######.##
@@ -80,7 +80,7 @@ L.#.L..#..
 <p>At this point, something interesting happens: the chaos stabilizes and further applications of these rules cause no seats to change state! Once people stop moving around, you count <em><code>37</code></em> occupied seats.</p>
 <p>Simulate your seating area by applying the seating rules repeatedly until no seats change state. <em>How many seats end up occupied?</em></p>
 
-<h2 id="part2">--- Part Two ---</h2><p>As soon as people start to arrive, you realize your mistake. People don&apos;t just care about adjacent seats - they care about <em>the first seat they can see</em> in each of those eight directions!</p>
+<h2 id="part2">--- Part Two ---</h2><p>As soon as people start to arrive, you realize your mistake. People don't just care about adjacent seats - they care about <em>the first seat they can see</em> in each of those eight directions!</p>
 <p>Now, instead of considering just the eight immediately adjacent seats, consider the <em>first seat</em> in each of those eight directions. For example, the empty seat below would see <em>eight</em> occupied seats:</p>
 <pre><code>.......#.
 ...#.....
@@ -106,7 +106,7 @@ L.#.L..#..
 #.#.#.#
 .##.##.
 </code></pre>
-<p>Also, people seem to be more tolerant than you expected: it now takes <em>five or more</em> visible occupied seats for an occupied seat to become empty (rather than <em>four or more</em> from the previous rules). The other rules still apply: empty seats that see no occupied seats become occupied, seats matching no rule don&apos;t change, and floor never changes.</p>
+<p>Also, people seem to be more tolerant than you expected: it now takes <em>five or more</em> visible occupied seats for an occupied seat to become empty (rather than <em>four or more</em> from the previous rules). The other rules still apply: empty seats that see no occupied seats become occupied, seats matching no rule don't change, and floor never changes.</p>
 <p>Given the same starting layout as above, these new rules cause the seating area to shift around as follows:</p>
 <pre><code>L.LL.LL.LL
 LLLLLLL.LL

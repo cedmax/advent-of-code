@@ -1,4 +1,4 @@
-<h2>--- Day 13: Knights of the Dinner Table ---</h2><p>In years past, the holiday feast with your family hasn&apos;t gone so well.  Not everyone gets along!  This year, you resolve, will be different.  You&apos;re going to find the <em>optimal seating arrangement</em> and avoid all those awkward conversations.</p>
+<h2>--- Day 13: Knights of the Dinner Table ---</h2><p>In years past, the holiday feast with your family hasn't gone so well.  Not everyone gets along!  This year, you resolve, will be different.  You're going to find the <em>optimal seating arrangement</em> and avoid all those awkward conversations.</p>
 <p>You start by writing up a list of everyone invited and the amount their happiness would increase or decrease if they were to find themselves sitting next to each other person.  You have a circular table that will be just big enough to fit everyone comfortably, and so each person will have exactly two neighbors.</p>
 <p>For example, suppose you have only four attendees planned, and you <span title="Finding a method to calculate happiness units is left as an exercise for the reader.">calculate</span> their potential happiness as follows:</p>
 <pre><code>Alice would gain 54 happiness units by sitting next to Bob.
@@ -25,6 +25,6 @@ Carol       Alice
 <p>After trying every other seating arrangement in this hypothetical scenario, you find that this one is the most optimal, with a total change in happiness of <code>330</code>.</p>
 <p>What is the <em>total change in happiness</em> for the optimal seating arrangement of the actual guest list?</p>
 
-<h2 id="part2">--- Part Two ---</h2><p>In all the commotion, you realize that you forgot to seat yourself.  At this point, you&apos;re pretty apathetic toward the whole thing, and your happiness wouldn&apos;t really go up or down regardless of who you sit next to.  You assume everyone else would be just as ambivalent about sitting next to you, too.</p>
+<h2 id="part2">--- Part Two ---</h2><p>In all the commotion, you realize that you forgot to seat yourself.  At this point, you're pretty apathetic toward the whole thing, and your happiness wouldn't really go up or down regardless of who you sit next to.  You assume everyone else would be just as ambivalent about sitting next to you, too.</p>
 <p>So, add yourself to the list, and give all happiness relationships that involve you a score of <code>0</code>.</p>
 <p>What is the <em>total change in happiness</em> for the optimal seating arrangement that actually includes yourself?</p>

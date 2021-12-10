@@ -2,7 +2,7 @@
 <p>The Elves play this game by taking turns arranging the marbles in a <em>circle</em> according to very particular rules. The marbles are numbered starting with <code>0</code> and increasing by <code>1</code> until every marble has a number.</p>
 <p>First, the marble numbered <code>0</code> is placed in the circle. At this point, while it contains only a single marble, it is still a circle: the marble is both clockwise from itself and counter-clockwise from itself. This marble is designated the <em>current marble</em>.</p>
 <p>Then, each Elf takes a turn placing the <em>lowest-numbered remaining marble</em> into the circle between the marbles that are <code>1</code> and <code>2</code> marbles <em>clockwise</em> of the current marble. (When the circle is large enough, this means that there is one marble between the marble that was just placed and the current marble.) The marble that was just placed then becomes the <em>current marble</em>.</p>
-<p>However, if the marble that is about to be placed has a number which is a multiple of <code>23</code>, <em>something entirely different happens</em>. First, the current player keeps the marble they would have placed, adding it to their <em>score</em>. In addition, the marble <code>7</code> marbles <em>counter-clockwise</em> from the current marble is <em>removed</em> from the circle and <em>also</em> added to the current player&apos;s score. The marble located immediately <em>clockwise</em> of the marble that was removed becomes the new <em>current marble</em>.</p>
+<p>However, if the marble that is about to be placed has a number which is a multiple of <code>23</code>, <em>something entirely different happens</em>. First, the current player keeps the marble they would have placed, adding it to their <em>score</em>. In addition, the marble <code>7</code> marbles <em>counter-clockwise</em> from the current marble is <em>removed</em> from the circle and <em>also</em> added to the current player's score. The marble located immediately <em>clockwise</em> of the marble that was removed becomes the new <em>current marble</em>.</p>
 <p>For example, suppose there are 9 players. After the marble with value <code>0</code> is placed in the middle, each player (shown in square brackets) takes a turn. The result of each of those turns would produce circles of marbles like this, where clockwise is to the right and the resulting current marble is in parentheses:</p>
 <pre><code>[-] <em>(0)</em>
 [1]  0<em> (1)</em>
@@ -40,4 +40,4 @@
 <li><code>21</code> players; last marble is worth <code>6111</code> points: high score is <em><code>54718</code></em></li>
 <li><code>30</code> players; last marble is worth <code>5807</code> points: high score is <em><code>37305</code></em></li>
 </ul>
-<p><em>What is the winning Elf&apos;s score?</em></p>
+<p><em>What is the winning Elf's score?</em></p>

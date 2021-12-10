@@ -1,6 +1,6 @@
-<h2>--- Day 19: A Series of Tubes ---</h2><p>Somehow, a network packet got <span title="I know how fast it&apos;s going, but I don&apos;t know where it is.">lost</span> and ended up here.  It&apos;s trying to follow a routing diagram (your puzzle input), but it&apos;s confused about where to go.</p>
+<h2>--- Day 19: A Series of Tubes ---</h2><p>Somehow, a network packet got <span title="I know how fast it's going, but I don't know where it is.">lost</span> and ended up here.  It's trying to follow a routing diagram (your puzzle input), but it's confused about where to go.</p>
 <p>Its starting point is just off the top of the diagram. Lines (drawn with <code>|</code>, <code>-</code>, and <code>+</code>) show the path it needs to take, starting by going down onto the only line connected to the top of the diagram. It needs to follow this path until it reaches the end (located somewhere within the diagram) and stop there.</p>
-<p>Sometimes, the lines cross over each other; in these cases, it needs to continue going the same direction, and only turn left or right when there&apos;s no other option.  In addition, someone has left <em>letters</em> on the line; these also don&apos;t change its direction, but it can use them to keep track of where it&apos;s been. For example:</p>
+<p>Sometimes, the lines cross over each other; in these cases, it needs to continue going the same direction, and only turn left or right when there's no other option.  In addition, someone has left <em>letters</em> on the line; these also don't change its direction, but it can use them to keep track of where it's been. For example:</p>
 <pre><code>     |          
      |  +--+    
      A  |  C    

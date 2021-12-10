@@ -9,7 +9,7 @@
 <p>While this is very space-efficient (no squares are skipped), requested data must be carried back to square <code>1</code> (the location of the only access port for this memory system) by programs that can only move up, down, left, or right. They always take the shortest path: the <a href="https://en.wikipedia.org/wiki/Taxicab_geometry">Manhattan Distance</a> between the location of the data and square <code>1</code>.</p>
 <p>For example:</p>
 <ul>
-<li>Data from square <code>1</code> is carried <code>0</code> steps, since it&apos;s at the access port.</li>
+<li>Data from square <code>1</code> is carried <code>0</code> steps, since it's at the access port.</li>
 <li>Data from square <code>12</code> is carried <code>3</code> steps, such as: down, left, left.</li>
 <li>Data from square <code>23</code> is carried only <code>2</code> steps: up twice.</li>
 <li>Data from square <code>1024</code> must be carried <code>31</code> steps.</li>
@@ -17,7 +17,7 @@
 <p><em>How many steps</em> are required to carry the data from the square identified in your puzzle input all the way to the access port?</p>
 
 <h2 id="part2">--- Part Two ---</h2><p>As a stress test on the system, the programs here clear the grid and then store the value <code>1</code> in square <code>1</code>. Then, in the same allocation order as shown above, they store the sum of the values in all adjacent squares, including diagonals.</p>
-<p>So, the first few squares&apos; values are chosen as follows:</p>
+<p>So, the first few squares' values are chosen as follows:</p>
 <ul>
 <li>Square <code>1</code> starts with the value <code>1</code>.</li>
 <li>Square <code>2</code> has only one adjacent filled square (with value <code>1</code>), so it also stores <code>1</code>.</li>

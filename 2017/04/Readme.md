@@ -6,9 +6,9 @@
 <li><code>aa bb cc dd aa</code> is not valid - the word <code>aa</code> appears more than once.</li>
 <li><code>aa bb cc dd aaa</code> is valid - <code>aa</code> and <code>aaa</code> count as different words.</li>
 </ul>
-<p>The system&apos;s full passphrase list is available as your puzzle input. <em>How many passphrases are valid?</em></p>
+<p>The system's full passphrase list is available as your puzzle input. <em>How many passphrases are valid?</em></p>
 
-<h2 id="part2">--- Part Two ---</h2><p>For added security, <span title="Because as everyone knows, the number of rules is proportional to the level of security.">yet another system policy</span> has been put in place.  Now, a valid passphrase must contain no two words that are anagrams of each other - that is, a passphrase is invalid if any word&apos;s letters can be rearranged to form any other word in the passphrase.</p>
+<h2 id="part2">--- Part Two ---</h2><p>For added security, <span title="Because as everyone knows, the number of rules is proportional to the level of security.">yet another system policy</span> has been put in place.  Now, a valid passphrase must contain no two words that are anagrams of each other - that is, a passphrase is invalid if any word's letters can be rearranged to form any other word in the passphrase.</p>
 <p>For example:</p>
 <ul>
 <li><code>abcde fghij</code> is a valid passphrase.</li>

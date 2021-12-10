@@ -1,8 +1,8 @@
 <h2>--- Day 20: Jurassic Jigsaw ---</h2><p>The high-speed train leaves the forest and quickly carries you south. You can even see a desert in the distance! Since you have some spare time, you <span title="Just in case. Maybe they missed something.">might as well</span> see if there was anything interesting in the image the Mythical Information Bureau satellite captured.</p>
-<p>After decoding the satellite messages, you discover that the data actually contains many small images created by the satellite&apos;s <em>camera array</em>. The camera array consists of many cameras; rather than produce a single square image, they produce many smaller square image <em>tiles</em> that need to be <em>reassembled back into a single image</em>.</p>
+<p>After decoding the satellite messages, you discover that the data actually contains many small images created by the satellite's <em>camera array</em>. The camera array consists of many cameras; rather than produce a single square image, they produce many smaller square image <em>tiles</em> that need to be <em>reassembled back into a single image</em>.</p>
 <p>Each camera in the camera array returns a single monochrome <em>image tile</em> with a random unique <em>ID number</em>.  The tiles (your puzzle input) arrived in a random order.</p>
 <p>Worse yet, the camera array appears to be malfunctioning: each image tile has been <em>rotated and flipped to a random orientation</em>. Your first task is to reassemble the original image by orienting the tiles so they fit together.</p>
-<p>To show how the tiles should be reassembled, each tile&apos;s image data includes a border that should line up exactly with its adjacent tiles. All tiles have this border, and the border lines up exactly when the tiles are both oriented correctly. Tiles at the edge of the image also have this border, but the outermost edges won&apos;t line up with any other tiles.</p>
+<p>To show how the tiles should be reassembled, each tile's image data includes a border that should line up exactly with its adjacent tiles. All tiles have this border, and the border lines up exactly when the tiles are both oriented correctly. Tiles at the edge of the image also have this border, but the outermost edges won't line up with any other tiles.</p>
 <p>For example, suppose you have the following nine tiles:</p>
 <pre><code>Tile 2311:
 ..##.#..#.
@@ -151,5 +151,5 @@ Tile 3079:
 2729    1427    2473
 <em>2971</em>    1489    <em>1171</em>
 </code></pre>
-<p>To check that you&apos;ve assembled the image correctly, multiply the IDs of the four corner tiles together. If you do this with the assembled tiles from the example above, you get <code>1951 * 3079 * 2971 * 1171</code> = <em><code>20899048083289</code></em>.</p>
+<p>To check that you've assembled the image correctly, multiply the IDs of the four corner tiles together. If you do this with the assembled tiles from the example above, you get <code>1951 * 3079 * 2971 * 1171</code> = <em><code>20899048083289</code></em>.</p>
 <p>Assemble the tiles into an image. <em>What do you get if you multiply together the IDs of the four corner tiles?</em></p>

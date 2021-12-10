@@ -1,5 +1,5 @@
 <h2>--- Day 15: Rambunctious Recitation ---</h2><p>You catch the airport shuttle and try to book a new flight to your vacation island. Due to the storm, all direct flights have been cancelled, but a route is available to get around the storm. You take it.</p>
-<p>While you wait for your flight, you decide to check in with the Elves back at the North Pole. They&apos;re playing a <em>memory game</em> and are <span title="Of course they are.">ever so excited</span> to explain the rules!</p>
+<p>While you wait for your flight, you decide to check in with the Elves back at the North Pole. They're playing a <em>memory game</em> and are <span title="Of course they are.">ever so excited</span> to explain the rules!</p>
 <p>In this game, the players take turns saying <em>numbers</em>. They begin by taking turns reading from a list of <em>starting numbers</em> (your puzzle input). Then, each turn consists of considering the <em>most recently spoken number</em>:</p>
 <ul>
 <li>If that was the <em>first</em> time the number has been spoken, the current player says <em><code>0</code></em>.</li>

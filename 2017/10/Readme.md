@@ -1,4 +1,4 @@
-<h2>--- Day 10: Knot Hash ---</h2><p>You come across some programs that are trying to implement a software emulation of a hash based on knot-tying. The hash these programs are implementing isn&apos;t very strong, but you decide to help them anyway. You make a mental note to remind the Elves later not to <span title="NEW CRYPTOSYSTEM WHO DIS">invent their own cryptographic functions</span>.</p>
+<h2>--- Day 10: Knot Hash ---</h2><p>You come across some programs that are trying to implement a software emulation of a hash based on knot-tying. The hash these programs are implementing isn't very strong, but you decide to help them anyway. You make a mental note to remind the Elves later not to <span title="NEW CRYPTOSYSTEM WHO DIS">invent their own cryptographic functions</span>.</p>
 <p>This hash function simulates tying a knot in a circle of string with 256 marks on it. Based on the input to be hashed, the function repeatedly selects a span of string, brings the ends together, and gives the span a half-twist to reverse the order of the marks within it. After doing this many times, the order of the marks is used to build the resulting hash.</p>
 <pre><code>  4--5   pinch   4  5           4   1
  /    \  5,0,1  / \/ \  twist  / \ / \
@@ -13,7 +13,7 @@
 <li><em>Increase</em> the <em>skip size</em> by one.</li>
 </ul>
 <p>The <em>list</em> is circular; if the <em>current position</em> and the <em>length</em> try to reverse elements beyond the end of the list, the operation reverses using as many extra elements as it needs from the front of the list. If the <em>current position</em> moves past the end of the list, it wraps around to the front. <em>Lengths</em> larger than the size of the <em>list</em> are invalid.</p>
-<p>Here&apos;s an example using a smaller list:</p>
+<p>Here's an example using a smaller list:</p>
 <p>Suppose we instead only had a circular list containing five elements, <code>0, 1, 2, 3, 4</code>, and were given input lengths of <code>3, 4, 1, 5</code>.</p>
 <ul>
 <li>The list begins as <code>[0] 1 2 3 4</code> (where square brackets indicate the <em>current position</em>).</li>

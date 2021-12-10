@@ -1,9 +1,9 @@
 <h2>--- Day 25: The Halting Problem ---</h2><p>Following the twisty passageways deeper and deeper into the CPU, you finally reach the <span title="Get it? CPU core?">core</span> of the computer. Here, in the expansive central chamber, you find a grand apparatus that fills the entire room, suspended nanometers above your head.</p>
 <p>You had always imagined CPUs to be noisy, chaotic places, bustling with activity. Instead, the room is quiet, motionless, and dark.</p>
-<p>Suddenly, you and the CPU&apos;s <em>garbage collector</em> startle each other. &quot;It&apos;s not often we get  many visitors here!&quot;, he says. You inquire about the stopped machinery.</p>
-<p>&quot;It stopped milliseconds ago; not sure why. I&apos;m a garbage collector, not a doctor.&quot; You ask what the machine is for.</p>
-<p>&quot;Programs these days, don&apos;t know their origins. That&apos;s the <em>Turing machine</em>! It&apos;s what makes the whole computer work.&quot; You try to explain that Turing machines are merely models of computation, but he cuts you off. &quot;No, see, that&apos;s just what they <em>want</em> you to think. Ultimately, inside every CPU, there&apos;s a Turing machine driving the whole thing! Too bad this one&apos;s broken. <a href="https://www.youtube.com/watch?v=cTwZZz0HV8I">We&apos;re doomed!</a>&quot;</p>
-<p>You ask how you can help. &quot;Well, unfortunately, the only way to get the computer running again would be to create a whole new Turing machine from scratch, but there&apos;s no <em>way</em> you can-&quot; He notices the look on your face, gives you a curious glance, shrugs, and goes back to sweeping the floor.</p>
+<p>Suddenly, you and the CPU's <em>garbage collector</em> startle each other. "It's not often we get  many visitors here!", he says. You inquire about the stopped machinery.</p>
+<p>"It stopped milliseconds ago; not sure why. I'm a garbage collector, not a doctor." You ask what the machine is for.</p>
+<p>"Programs these days, don't know their origins. That's the <em>Turing machine</em>! It's what makes the whole computer work." You try to explain that Turing machines are merely models of computation, but he cuts you off. "No, see, that's just what they <em>want</em> you to think. Ultimately, inside every CPU, there's a Turing machine driving the whole thing! Too bad this one's broken. <a href="https://www.youtube.com/watch?v=cTwZZz0HV8I">We're doomed!</a>"</p>
+<p>You ask how you can help. "Well, unfortunately, the only way to get the computer running again would be to create a whole new Turing machine from scratch, but there's no <em>way</em> you can-" He notices the look on your face, gives you a curious glance, shrugs, and goes back to sweeping the floor.</p>
 <p>You find the <em>Turing machine blueprints</em> (your puzzle input) on a tablet in a nearby pile of debris. Looking back up at the broken Turing machine above, you can start to identify its parts:</p>
 <ul>
 <li>A <em>tape</em> which contains <code>0</code> repeated infinitely to the left and right.</li>
@@ -45,4 +45,4 @@ In state B:
 ... 0  1  1 [0] 1  0 ... (after 6 steps;    about to run state A)
 </code></pre>
 <p>The CPU can confirm that the Turing machine is working by taking a <em>diagnostic checksum</em> after a specific number of steps (given in the blueprint). Once the specified number of steps have been executed, the Turing machine should pause; once it does, count the number of times <code>1</code> appears on the tape. In the above example, the <em>diagnostic checksum</em> is <em><code>3</code></em>.</p>
-<p>Recreate the Turing machine and save the computer! <em>What is the diagnostic checksum</em> it produces once it&apos;s working again?</p>
+<p>Recreate the Turing machine and save the computer! <em>What is the diagnostic checksum</em> it produces once it's working again?</p>

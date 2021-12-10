@@ -1,6 +1,6 @@
 <h2>--- Day 16: Permutation Promenade ---</h2><p>You come upon a very unusual sight; a group of programs here appear to be <a href="https://www.youtube.com/watch?v=lyZQPjUT5B4&amp;t=53">dancing</a>.</p>
-<p>There are sixteen programs in total, named <code>a</code> through <code>p</code>. They start by standing in a <span title="This is called a &apos;newline&apos;.">line</span>: <code>a</code> stands in position <code>0</code>, <code>b</code> stands in position <code>1</code>, and so on until <code>p</code>, which stands in position <code>15</code>.</p>
-<p>The programs&apos; <em>dance</em> consists of a sequence of <em>dance moves</em>:</p>
+<p>There are sixteen programs in total, named <code>a</code> through <code>p</code>. They start by standing in a <span title="This is called a 'newline'.">line</span>: <code>a</code> stands in position <code>0</code>, <code>b</code> stands in position <code>1</code>, and so on until <code>p</code>, which stands in position <code>15</code>.</p>
+<p>The programs' <em>dance</em> consists of a sequence of <em>dance moves</em>:</p>
 <ul>
 <li><em>Spin</em>, written <code>sX</code>, makes <code>X</code> programs move from the end to the front, but maintain their order otherwise. (For example, <code>s3</code> on <code>abcde</code> produces <code>cdeab</code>).</li>
 <li><em>Exchange</em>, written <code>xA/B</code>, makes the programs at positions <code>A</code> and <code>B</code> swap places.</li>

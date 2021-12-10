@@ -1,5 +1,5 @@
-<h2>--- Day 18: Operation Order ---</h2><p>As you look out the window and notice a heavily-forested continent slowly appear over the horizon, you are interrupted by the child sitting next to you. They&apos;re curious if you could help them with their <span title="Or &quot;maths&quot;, if you have more than one.">math</span> homework.</p>
-<p>Unfortunately, it seems like this &quot;math&quot; <a href="https://www.youtube.com/watch?v=3QtRK7Y2pPU&amp;t=15" target="_blank">follows different rules</a> than you remember.</p>
+<h2>--- Day 18: Operation Order ---</h2><p>As you look out the window and notice a heavily-forested continent slowly appear over the horizon, you are interrupted by the child sitting next to you. They're curious if you could help them with their <span title="Or &quot;maths&quot;, if you have more than one.">math</span> homework.</p>
+<p>Unfortunately, it seems like this "math" <a href="https://www.youtube.com/watch?v=3QtRK7Y2pPU&amp;t=15" target="_blank">follows different rules</a> than you remember.</p>
 <p>The homework (your puzzle input) consists of a series of expressions that consist of addition (<code>+</code>), multiplication (<code>*</code>), and parentheses (<code>(...)</code>). Just like normal math, parentheses indicate that the expression inside must be evaluated before it can be used by the surrounding expression. Addition still finds the sum of the numbers on both sides of the operator, and multiplication still finds the product.</p>
 <p>However, the rules of <em>operator precedence</em> have changed. Rather than evaluating multiplication before addition, the operators have the <em>same precedence</em>, and are evaluated left-to-right regardless of the order in which they appear.</p>
 <p>For example, the steps to evaluate the expression <code>1 + 2 * 3 + 4 * 5 + 6</code> are as follows:</p>
@@ -27,8 +27,8 @@
 </ul>
 <p>Before you can help with the homework, you need to understand it yourself. <em>Evaluate the expression on each line of the homework; what is the sum of the resulting values?</em></p>
 
-<h2 id="part2">--- Part Two ---</h2><p>You manage to answer the child&apos;s questions and they finish part 1 of their homework, but get stuck when they reach the next section: <em>advanced</em> math.</p>
-<p>Now, addition and multiplication have <em>different</em> precedence levels, but they&apos;re not the ones you&apos;re familiar with. Instead, addition is evaluated <em>before</em> multiplication.</p>
+<h2 id="part2">--- Part Two ---</h2><p>You manage to answer the child's questions and they finish part 1 of their homework, but get stuck when they reach the next section: <em>advanced</em> math.</p>
+<p>Now, addition and multiplication have <em>different</em> precedence levels, but they're not the ones you're familiar with. Instead, addition is evaluated <em>before</em> multiplication.</p>
 <p>For example, the steps to evaluate the expression <code>1 + 2 * 3 + 4 * 5 + 6</code> are now as follows:</p>
 <pre><code><em>1 + 2</em> * 3 + 4 * 5 + 6
   3   * <em>3 + 4</em> * 5 + 6

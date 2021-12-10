@@ -11,7 +11,7 @@
 <li>The fourth bank is chosen, and its four blocks are distributed such that each of the four banks receives one: <code>1 3 4 1</code>.</li>
 <li>The third bank is chosen, and the same thing happens: <code>2 4 1 2</code>.</li>
 </ul>
-<p>At this point, we&apos;ve reached a state we&apos;ve seen before: <code>2 4 1 2</code> was already seen. The infinite loop is detected after the fifth block redistribution cycle, and so the answer in this example is <code>5</code>.</p>
+<p>At this point, we've reached a state we've seen before: <code>2 4 1 2</code> was already seen. The infinite loop is detected after the fifth block redistribution cycle, and so the answer in this example is <code>5</code>.</p>
 <p>Given the initial block counts in your puzzle input, <em>how many redistribution cycles</em> must be completed before a configuration is produced that has been seen before?</p>
 
 <h2 id="part2">--- Part Two ---</h2><p>Out of curiosity, the debugger would also like to know the size of the loop: starting from a state that has already been seen, how many block redistribution cycles must be performed before that same state is seen again?</p>
