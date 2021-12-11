@@ -181,3 +181,4 @@ In my defense I haven't even tried to make them pretty, performant or even somet
 - [08 ✅](./2021/08)
 - [09 ✅](./2021/09)
 - [10 ✅](./2021/10)
+- [11 ✅](./2021/11)
