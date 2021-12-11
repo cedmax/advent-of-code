@@ -1,5 +1,5 @@
 <h2>--- Day 11: Dumbo Octopus ---</h2><p>You enter a large cavern full of rare bioluminescent <a href="https://www.youtube.com/watch?v=eih-VSaS2g0" target="_blank">dumbo octopuses</a>! They seem to not like the Christmas lights on your submarine, so you turn them off for now.</p>
-<p>There are 100 <span title="I know it's weird; I grew saying 'octopi' too.">octopuses</span> arranged neatly in a 10 by 10 grid. Each octopus slowly gains <em>energy</em> over time and <em>flashes</em> brightly for a moment when its energy is full. Although your lights are off, maybe you could navigate through the cave without disturbing the octopuses if you could predict when the flashes of light will happen.</p>
+<p>There are 100 <span title="I know it's weird; I grew up saying 'octopi' too.">octopuses</span> arranged neatly in a 10 by 10 grid. Each octopus slowly gains <em>energy</em> over time and <em>flashes</em> brightly for a moment when its energy is full. Although your lights are off, maybe you could navigate through the cave without disturbing the octopuses if you could predict when the flashes of light will happen.</p>
 <p>Each octopus has an <em>energy level</em> - your submarine can remotely measure the energy level of each octopus (your puzzle input). For example:</p>
 <pre><code>5483143223
 2745854711
@@ -288,3 +288,43 @@ After step 100:
 </code></pre>
 <p>After 100 steps, there have been a total of <code><em>1656</em></code> flashes.</p>
 <p>Given the starting energy levels of the dumbo octopuses in your cavern, simulate 100 steps. <em>How many total flashes are there after 100 steps?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>It seems like the individual flashes aren't bright enough to navigate. However, you might have a better option: the flashes seem to be <em>synchronizing</em>!</p>
+<p>In the example above, the first time all octopuses flash simultaneously is step <code><em>195</em></code>:</p>
+<pre><code>After step 193:
+5877777777
+8877777777
+7777777777
+7777777777
+7777777777
+7777777777
+7777777777
+7777777777
+7777777777
+7777777777
+
+After step 194:
+6988888888
+9988888888
+8888888888
+8888888888
+8888888888
+8888888888
+8888888888
+8888888888
+8888888888
+8888888888
+
+After step 195:
+<em>0000000000</em>
+<em>0000000000</em>
+<em>0000000000</em>
+<em>0000000000</em>
+<em>0000000000</em>
+<em>0000000000</em>
+<em>0000000000</em>
+<em>0000000000</em>
+<em>0000000000</em>
+<em>0000000000</em>
+</code></pre>
+<p>If you can calculate the exact moments when the octopuses will all flash simultaneously, you should be able to navigate through the cavern. <em>What is the first step during which all octopuses flash?</em></p>

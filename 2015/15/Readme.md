@@ -21,3 +21,7 @@ Cinnamon: capacity 2, durability 3, flavor -2, texture -1, calories 3
 </ul>
 <p>Multiplying these together (<code>68 * 80 * 152 * 76</code>, ignoring <code>calories</code> for now) results in a total score of  <code>62842880</code>, which happens to be the best score possible given these ingredients.  If any properties had produced a negative total, it would have instead become zero, causing the whole score to multiply to zero.</p>
 <p>Given the ingredients in your kitchen and their properties, what is the <em>total score</em> of the highest-scoring cookie you can make?</p>
+
+<h2 id="part2">--- Part Two ---</h2><p>Your cookie recipe becomes wildly popular!  Someone asks if you can make another recipe that has exactly <code>500</code> calories per cookie (so they can use it as a meal replacement).  Keep the rest of your award-winning process the same (100 teaspoons, same ingredients, same scoring system).</p>
+<p>For example, given the ingredients above, if you had instead selected <code>40</code> teaspoons of butterscotch and <code>60</code> teaspoons of cinnamon (which still adds to <code>100</code>), the total calorie count would be <code>40*8 + 60*3 = 500</code>.  The total score would go down, though: only <code>57600000</code>, the best you can do in such trying circumstances.</p>
+<p>Given the ingredients in your kitchen and their properties, what is the <em>total score</em> of the highest-scoring cookie you can make with a calorie total of <code>500</code>?</p>
