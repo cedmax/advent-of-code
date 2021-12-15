@@ -185,6 +185,8 @@ My poorly coded\*, all javascript solutions to [Advent of Code](https://adventof
 - [`11` ⭐⭐](./2021/11)
 - [`12` ⭐⭐](./2021/12)
 - [`13` ⭐⭐](./2021/13)
+- [`14` ⭐⭐](./2021/14)
+- [`15` ⭐⭐](./2021/15)
 
 <hr/>
 

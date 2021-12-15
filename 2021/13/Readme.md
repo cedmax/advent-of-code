@@ -93,3 +93,6 @@ fold along x=5
 <p>The instructions made a square!</p>
 <p>The transparent paper is pretty big, so for now, focus on just completing the first fold. After the first fold in the example above, <code><em>17</em></code> dots are visible - dots that end up overlapping after the fold is completed count as a single dot.</p>
 <p><em>How many dots are visible after completing just the first fold instruction on your transparent paper?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p><span title="How can you fold it that many times? You tell me, I'm not the one folding it.">Finish folding</span> the transparent paper according to the instructions. The manual says the code is always <em>eight capital letters</em>.</p>
+<p><em>What code do you use to activate the infrared thermal imaging camera system?</em></p>
