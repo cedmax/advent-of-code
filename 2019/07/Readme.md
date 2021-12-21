@@ -4,7 +4,7 @@
 0 -&gt;| Amp A |-&gt;| Amp B |-&gt;| Amp C |-&gt;| Amp D |-&gt;| Amp E |-&gt; (to thrusters)
     O-------O  O-------O  O-------O  O-------O  O-------O
 </code></pre>
-<p>The Elves have sent you some <em>Amplifier Controller Software</em> (your puzzle input), a program that should run on your <a href="5">existing Intcode computer</a>. Each amplifier will need to run a copy of the program.</p>
+<p>The Elves have sent you some <em>Amplifier Controller Software</em> (your puzzle input), a program that should run on your <a href="https://github.com/cedmax/advent-of-code/tree/main/2019/5">existing Intcode computer</a>. Each amplifier will need to run a copy of the program.</p>
 <p>When a copy of the program starts running on an amplifier, it will first use an input instruction to ask the amplifier for its current <em>phase setting</em> (an integer from <code>0</code> to <code>4</code>). Each phase setting is used <em>exactly once</em>, but the Elves can't remember which amplifier needs which phase setting.</p>
 <p>The program will then call another input instruction to get the amplifier's input signal, compute the correct output signal, and supply it back to the amplifier with an output instruction. (If the amplifier has not yet received an input signal, it waits until one arrives.)</p>
 <p>Your job is to <em>find the largest output signal that can be sent to the thrusters</em> by trying every possible combination of phase settings on the amplifiers. Make sure that memory is not shared or reused between copies of the program.</p>

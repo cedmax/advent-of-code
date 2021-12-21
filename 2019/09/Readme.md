@@ -1,7 +1,7 @@
 <h2>--- Day 9: Sensor Boost ---</h2><p>You've just said goodbye to the rebooted rover and left Mars when you receive a faint distress signal coming from the asteroid belt.  It must be the Ceres monitoring station!</p>
 <p>In order to lock on to the signal, you'll need to boost your sensors. The Elves send up the latest <em>BOOST</em> program - Basic Operation Of System Test.</p>
 <p>While BOOST (your puzzle input) is capable of boosting your sensors, for <span title="Oh sure, NOW safety is a priority.">tenuous safety reasons</span>, it refuses to do so until the computer it runs on passes some checks to demonstrate it is a <em>complete Intcode computer</em>.</p>
-<p><a href="5">Your existing Intcode computer</a> is missing one key feature: it needs support for parameters in <em>relative mode</em>.</p>
+<p><a href="https://github.com/cedmax/advent-of-code/tree/main/2019/5">Your existing Intcode computer</a> is missing one key feature: it needs support for parameters in <em>relative mode</em>.</p>
 <p>Parameters in mode <code>2</code>, <em>relative mode</em>, behave very similarly to parameters in <em>position mode</em>: the parameter is interpreted as a position.  Like position mode, parameters in relative mode can be read from or written to.</p>
 <p>The important difference is that relative mode parameters don't count from address <code>0</code>.  Instead, they count from a value called the <em>relative base</em>. The <em>relative base</em> starts at <code>0</code>.</p>
 <p>The address a relative mode parameter refers to is itself <em>plus</em> the current <em>relative base</em>. When the relative base is <code>0</code>, relative mode parameters and position mode parameters with the same value refer to the same address.</p>

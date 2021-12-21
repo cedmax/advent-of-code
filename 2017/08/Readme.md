@@ -1,4 +1,4 @@
-<h2>--- Day 8: I Heard You Like Registers ---</h2><p>You receive a <span title="There's that sorcery I told you about.">signal</span> directly from the CPU. Because of your recent assistance with <a href="5">jump instructions</a>, it would like you to compute the result of a series of unusual register instructions.</p>
+<h2>--- Day 8: I Heard You Like Registers ---</h2><p>You receive a <span title="There's that sorcery I told you about.">signal</span> directly from the CPU. Because of your recent assistance with <a href="https://github.com/cedmax/advent-of-code/tree/main/2017/5">jump instructions</a>, it would like you to compute the result of a series of unusual register instructions.</p>
 <p>Each instruction consists of several parts: the register to modify, whether to increase or decrease that register's value, the amount by which to increase or decrease it, and a condition. If the condition fails, skip the instruction without modifying the register. The registers all start at <code>0</code>. The instructions look like this:</p>
 <pre><code>b inc 5 if a &gt; 1
 a inc 1 if b &lt; 5

@@ -6,7 +6,7 @@
 <p>You call the service number printed on the side of the antenna and quickly explain the situation. "I'm not sure what kind of equipment you have connected over there," he says, "but you need a clock signal." You try to explain that this is a signal for a clock.</p>
 <p>"No, no, a <a href="https://en.wikipedia.org/wiki/Clock_signal">clock signal</a> - timing information so the antenna computer knows how to read the data you're sending it. An endless, alternating pattern of <code>0</code>, <code>1</code>, <code>0</code>, <code>1</code>, <code>0</code>, <code>1</code>, <code>0</code>, <code>1</code>, <code>0</code>, <code>1</code>...." He trails off.</p>
 <p>You ask if the antenna can handle a clock signal at the frequency you would need to use for the data from the stars. "There's <em>no way</em> it can! The only antenna we've installed capable of <em>that</em> is on top of a top-secret Easter Bunny installation, and you're <em>definitely</em> not-" You hang up the phone.</p>
-<p>You've extracted the antenna's clock signal generation <a href="12">assembunny</a> code (your puzzle input); it looks mostly compatible with code you worked on <a href="23">just recently</a>.</p>
+<p>You've extracted the antenna's clock signal generation <a href="https://github.com/cedmax/advent-of-code/tree/main/2016/12">assembunny</a> code (your puzzle input); it looks mostly compatible with code you worked on <a href="https://github.com/cedmax/advent-of-code/tree/main/2016/23">just recently</a>.</p>
 <p>This antenna code, being a signal generator, uses one extra instruction:</p>
 <ul>
 <li><code>out x</code> <em>transmits</em> <code>x</code> (either an integer or the <em>value</em> of a register) as the next value for the clock signal.</li>

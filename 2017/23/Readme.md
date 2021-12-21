@@ -1,5 +1,5 @@
 <h2>--- Day 23: Coprocessor Conflagration ---</h2><p>You decide to head directly to the CPU and fix the printer from there. As you get close, you find an <em>experimental coprocessor</em> doing so much work that the local programs are afraid it will <a href="https://en.wikipedia.org/wiki/Halt_and_Catch_Fire">halt and catch fire</a>. This would cause serious issues for the rest of the computer, so you head in and see what you can do.</p>
-<p>The code it's running seems to be a variant of the kind you saw recently on that <a href="18">tablet</a>. The general functionality seems <em>very similar</em>, but some of the instructions are different:</p>
+<p>The code it's running seems to be a variant of the kind you saw recently on that <a href="https://github.com/cedmax/advent-of-code/tree/main/2017/18">tablet</a>. The general functionality seems <em>very similar</em>, but some of the instructions are different:</p>
 <ul>
 <li><code>set X Y</code> <em>sets</em> register <code>X</code> to the value of <code>Y</code>.</li>
 <li><code>sub X Y</code> <em>decreases</em> register <code>X</code> by the value of <code>Y</code>.</li>

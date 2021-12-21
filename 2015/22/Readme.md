@@ -1,4 +1,4 @@
-<h2>--- Day 22: Wizard Simulator 20XX ---</h2><p>Little Henry Case decides that defeating bosses with <a href="21">swords and stuff</a> is boring.  Now he's playing the game with a <span title="Being a !@#$% Sorcerer.">wizard</span>.  Of course, he gets stuck on another boss and needs your help again.</p>
+<h2>--- Day 22: Wizard Simulator 20XX ---</h2><p>Little Henry Case decides that defeating bosses with <a href="https://github.com/cedmax/advent-of-code/tree/main/2015/21">swords and stuff</a> is boring.  Now he's playing the game with a <span title="Being a !@#$% Sorcerer.">wizard</span>.  Of course, he gets stuck on another boss and needs your help again.</p>
 <p>In this version, combat still proceeds with the player and the boss taking alternating turns.  The player still goes first.  Now, however, you don't get any equipment; instead, you must choose one of your spells to cast.  The first character at or below <code>0</code> hit points loses.</p>
 <p>Since you're a wizard, you don't get to wear armor, and you can't attack normally.  However, since you do <em>magic damage</em>, your opponent's armor is ignored, and so the boss effectively has zero armor as well.  As before, if armor (from a spell, in this case) would reduce damage below <code>1</code>, it becomes <code>1</code> instead - that is, the boss' attacks always deal at least <code>1</code> damage.</p>
 <p>On each of your turns, you must select one of your spells to cast.  If you cannot afford to cast any spell, you lose.  Spells cost <em>mana</em>; you start with <em>500</em> mana, but have no maximum limit.  You must have enough mana to cast a spell, and its cost is immediately deducted when you cast it.  Your spells are Magic Missile, Drain, Shield, Poison, and Recharge.</p>
@@ -17,18 +17,21 @@
 Player casts Poison.
 
 -- Boss turn --
+
 - Player has 10 hit points, 0 armor, 77 mana
 - Boss has 13 hit points
-Poison deals 3 damage; its timer is now 5.
-Boss attacks for 8 damage.
+  Poison deals 3 damage; its timer is now 5.
+  Boss attacks for 8 damage.
 
 -- Player turn --
+
 - Player has 2 hit points, 0 armor, 77 mana
 - Boss has 10 hit points
-Poison deals 3 damage; its timer is now 4.
-Player casts Magic Missile, dealing 4 damage.
+  Poison deals 3 damage; its timer is now 4.
+  Player casts Magic Missile, dealing 4 damage.
 
 -- Boss turn --
+
 - Player has 2 hit points, 0 armor, 24 mana
 - Boss has 3 hit points
 Poison deals 3 damage. This kills the boss, and the player wins.
@@ -37,64 +40,73 @@ Poison deals 3 damage. This kills the boss, and the player wins.
 <pre><code>-- Player turn --
 - Player has 10 hit points, 0 armor, 250 mana
 - Boss has 14 hit points
-Player casts Recharge.
+  Player casts Recharge.
 
 -- Boss turn --
+
 - Player has 10 hit points, 0 armor, 21 mana
 - Boss has 14 hit points
-Recharge provides 101 mana; its timer is now 4.
-Boss attacks for 8 damage!
+  Recharge provides 101 mana; its timer is now 4.
+  Boss attacks for 8 damage!
 
 -- Player turn --
+
 - Player has 2 hit points, 0 armor, 122 mana
 - Boss has 14 hit points
-Recharge provides 101 mana; its timer is now 3.
-Player casts Shield, increasing armor by 7.
+  Recharge provides 101 mana; its timer is now 3.
+  Player casts Shield, increasing armor by 7.
 
 -- Boss turn --
+
 - Player has 2 hit points, 7 armor, 110 mana
 - Boss has 14 hit points
-Shield's timer is now 5.
-Recharge provides 101 mana; its timer is now 2.
-Boss attacks for 8 - 7 = 1 damage!
+  Shield's timer is now 5.
+  Recharge provides 101 mana; its timer is now 2.
+  Boss attacks for 8 - 7 = 1 damage!
 
 -- Player turn --
+
 - Player has 1 hit point, 7 armor, 211 mana
 - Boss has 14 hit points
-Shield's timer is now 4.
-Recharge provides 101 mana; its timer is now 1.
-Player casts Drain, dealing 2 damage, and healing 2 hit points.
+  Shield's timer is now 4.
+  Recharge provides 101 mana; its timer is now 1.
+  Player casts Drain, dealing 2 damage, and healing 2 hit points.
 
 -- Boss turn --
+
 - Player has 3 hit points, 7 armor, 239 mana
 - Boss has 12 hit points
-Shield's timer is now 3.
-Recharge provides 101 mana; its timer is now 0.
-Recharge wears off.
-Boss attacks for 8 - 7 = 1 damage!
+  Shield's timer is now 3.
+  Recharge provides 101 mana; its timer is now 0.
+  Recharge wears off.
+  Boss attacks for 8 - 7 = 1 damage!
 
 -- Player turn --
+
 - Player has 2 hit points, 7 armor, 340 mana
 - Boss has 12 hit points
-Shield's timer is now 2.
-Player casts Poison.
+  Shield's timer is now 2.
+  Player casts Poison.
 
 -- Boss turn --
+
 - Player has 2 hit points, 7 armor, 167 mana
 - Boss has 12 hit points
-Shield's timer is now 1.
-Poison deals 3 damage; its timer is now 5.
-Boss attacks for 8 - 7 = 1 damage!
+  Shield's timer is now 1.
+  Poison deals 3 damage; its timer is now 5.
+  Boss attacks for 8 - 7 = 1 damage!
 
 -- Player turn --
+
 - Player has 1 hit point, 7 armor, 167 mana
 - Boss has 9 hit points
-Shield's timer is now 0.
-Shield wears off, decreasing armor by 7.
-Poison deals 3 damage; its timer is now 4.
-Player casts Magic Missile, dealing 4 damage.
+  Shield's timer is now 0.
+  Shield wears off, decreasing armor by 7.
+  Poison deals 3 damage; its timer is now 4.
+  Player casts Magic Missile, dealing 4 damage.
 
 -- Boss turn --
+
 - Player has 1 hit point, 0 armor, 114 mana
 - Boss has 2 hit points
 Poison deals 3 damage. This kills the boss, and the player wins.

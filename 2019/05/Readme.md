@@ -1,5 +1,5 @@
 <h2>--- Day 5: Sunny with a Chance of Asteroids ---</h2><p>You're starting to sweat as the ship makes its way toward Mercury.  The Elves suggest that you get the air conditioner working by upgrading your ship computer to support the Thermal Environment Supervision Terminal.</p>
-<p>The Thermal Environment Supervision Terminal (TEST) starts by running a <em>diagnostic program</em> (your puzzle input).  The TEST diagnostic program will run on <a href="2">your existing Intcode computer</a> after a few modifications:</p>
+<p>The Thermal Environment Supervision Terminal (TEST) starts by running a <em>diagnostic program</em> (your puzzle input).  The TEST diagnostic program will run on <a href="https://github.com/cedmax/advent-of-code/tree/main/2019/2">your existing Intcode computer</a> after a few modifications:</p>
 <p><em>First</em>, you'll need to add <em>two new instructions</em>:</p>
 <ul>
 <li>Opcode <code>3</code> takes a single integer as <em>input</em> and saves it to the position given by its only parameter. For example, the instruction <code>3,50</code> would take an input value and store it at address <code>50</code>.</li>
@@ -15,12 +15,13 @@
 <pre><code>ABCDE
  1002
 
-DE - two-digit opcode,      02 == opcode 2
- C - mode of 1st parameter,  0 == position mode
- B - mode of 2nd parameter,  1 == immediate mode
- A - mode of 3rd parameter,  0 == position mode,
-                                  omitted due to being a leading zero
+DE - two-digit opcode, 02 == opcode 2
+C - mode of 1st parameter, 0 == position mode
+B - mode of 2nd parameter, 1 == immediate mode
+A - mode of 3rd parameter, 0 == position mode,
+omitted due to being a leading zero
 </code></pre>
+
 <p>This instruction multiplies its first two parameters.  The first parameter, <code>4</code> in position mode, works like it did before - its value is the value stored at address <code>4</code> (<code>33</code>). The second parameter, <code>3</code> in immediate mode, simply has value <code>3</code>. The result of this operation, <code>33 * 3 = 99</code>, is written according to the third parameter, <code>4</code> in position mode, which also works like it did before - <code>99</code> is written to address <code>4</code>.</p>
 <p>Parameters that an instruction writes to will <em>never be in immediate mode</em>.</p>
 <p><em>Finally</em>, some notes:</p>

@@ -1,4 +1,4 @@
-<h2>--- Day 19: Beacon Scanner ---</h2><p>As your <a href="17">probe</a> drifted down through this area, it released an assortment of <em>beacons</em> and <em>scanners</em> into the water. It's difficult to navigate in the pitch black open waters of the ocean trench, but if you can build a map of the trench using data from the scanners, you should be able to safely reach the bottom.</p>
+<h2>--- Day 19: Beacon Scanner ---</h2><p>As your <a href="https://github.com/cedmax/advent-of-code/tree/main/2021/17">probe</a> drifted down through this area, it released an assortment of <em>beacons</em> and <em>scanners</em> into the water. It's difficult to navigate in the pitch black open waters of the ocean trench, but if you can build a map of the trench using data from the scanners, you should be able to safely reach the bottom.</p>
 <p>The beacons and scanners float motionless in the water; they're designed to maintain the same position for long periods of time. Each scanner is capable of detecting all beacons in a large cube centered on the scanner; beacons that are at most 1000 units away from the scanner in each of the three axes (<code>x</code>, <code>y</code>, and <code>z</code>) have their precise position determined relative to the scanner. However, scanners cannot detect other scanners. The submarine has automatically summarized the relative positions of beacons detected by each scanner (your puzzle input).</p>
 <p>For example, if a scanner is at <code>x,y,z</code> coordinates <code>500,0,-500</code> and there are beacons at <code>-500,1000,-1500</code> and <code>1501,0,-500</code>, the scanner could report that the first beacon is at <code>-1000,1000,-1000</code> (relative to the scanner) but would not detect the second beacon at all.</p>
 <p>Unfortunately, while each scanner can report the positions of all detected beacons relative to itself, <em>the scanners do not know their own position</em>. You'll need to determine the positions of the beacons and scanners yourself.</p>
@@ -14,6 +14,7 @@
 -5,0
 -2,1
 </code></pre>
+
 <p>Drawing <code>x</code> increasing rightward, <code>y</code> increasing upward, scanners as <code>S</code>, and beacons as <code>B</code>, scanner <code>0</code> detects this:</p>
 <pre><code>...B.
 B....
@@ -73,6 +74,7 @@ S.....
 -6,-4,-5
 0,7,-8
 </code></pre>
+
 <p>By finding pairs of scanners that both see at least 12 of the same beacons, you can assemble the entire map. For example, consider the following report:</p>
 <pre><code>--- scanner 0 ---
 404,-588,-901
@@ -211,6 +213,7 @@ S.....
 -652,-548,-490
 30,-46,-14
 </code></pre>
+
 <p>Because all coordinates are relative, in this example, all "absolute" positions will be expressed relative to scanner <code>0</code> (using the orientation of scanner <code>0</code> and as if scanner <code>0</code> is at coordinates <code>0,0,0</code>).</p>
 <p>Scanners <code>0</code> and <code>1</code> have overlapping detection cubes; the 12 beacons they both detect (relative to scanner <code>0</code>) are at the following coordinates:</p>
 <pre><code>-618,-824,-621
