@@ -343,3 +343,7 @@ S.....
 </code></pre>
 <p>In total, there are <code><em>79</em></code> beacons.</p>
 <p>Assemble the full map of beacons. <em>How many beacons are there?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>Sometimes, it's a good idea to appreciate just how <span title="The deepest parts of the ocean are about as deep as the altitude of a normal commercial aircraft, roughly 11 kilometers or 36000 feet.">big</span> the ocean is. Using the <a href="https://en.wikipedia.org/wiki/Taxicab_geometry" target="_blank">Manhattan distance</a>, how far apart do the scanners get?</p>
+<p>In the above example, scanners <code>2</code> (<code>1105,-1205,1229</code>) and <code>3</code> (<code>-92,-2380,-20</code>) are the largest Manhattan distance apart. In total, they are <code>1197 + 1175 + 1249 = <em>3621</em></code> units apart.</p>
+<p><em>What is the largest Manhattan distance between any two scanners?</em></p>

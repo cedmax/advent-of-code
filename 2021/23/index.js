@@ -52,11 +52,11 @@ const move = ([x0, y0], [destX, destY]) => {
 }
 
 const visualise = async (input, commands) => {
-  const container = new LiveContainer()
-  const breaker = container.createLiveArea()
+  const container = new LiveContainer().hook()
+  const breaker = container.createLiveArea().hook()
   breaker.write('\n')
-  const schema = container.createLiveArea()
-  const points = container.createLiveArea()
+  const schema = container.createLiveArea().hook()
+  const points = container.createLiveArea().hook()
 
   let total = 0
   schema.write(print(input))

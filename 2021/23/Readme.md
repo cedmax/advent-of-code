@@ -80,3 +80,222 @@
   #########
 </code></pre>
 <p><em>What is the least energy required to organize the amphipods?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>As you prepare to give the amphipods your solution, you notice that the diagram they handed you was actually folded up. As you unfold it, you discover an extra part of the diagram.</p>
+<p>Between the first and second lines of text that contain amphipod starting positions, insert the following lines:</p>
+<pre><code>  #D#C#B#A#
+  #D#B#A#C#
+</code></pre>
+<p>So, the above example now becomes:</p>
+<pre><code>#############
+#...........#
+###B#C#B#D###
+  <em>#D#C#B#A#
+  #D#B#A#C#</em>
+  #A#D#C#A#
+  #########
+</code></pre>
+<p>The amphipods still want to be organized into rooms similar to before:</p>
+<pre><code>#############
+#...........#
+###A#B#C#D###
+  #A#B#C#D#
+  #A#B#C#D#
+  #A#B#C#D#
+  #########
+</code></pre>
+<p>In this updated example, the least energy required to organize these amphipods is <code><em>44169</em></code>:</p>
+<pre><code>#############
+#...........#
+###B#C#B#D###
+  #D#C#B#A#
+  #D#B#A#C#
+  #A#D#C#A#
+  #########
+
+#############
+#..........D#
+###B#C#B#.###
+  #D#C#B#A#
+  #D#B#A#C#
+  #A#D#C#A#
+  #########
+
+#############
+#A.........D#
+###B#C#B#.###
+  #D#C#B#.#
+  #D#B#A#C#
+  #A#D#C#A#
+  #########
+
+#############
+#A........BD#
+###B#C#.#.###
+  #D#C#B#.#
+  #D#B#A#C#
+  #A#D#C#A#
+  #########
+
+#############
+#A......B.BD#
+###B#C#.#.###
+  #D#C#.#.#
+  #D#B#A#C#
+  #A#D#C#A#
+  #########
+
+#############
+#AA.....B.BD#
+###B#C#.#.###
+  #D#C#.#.#
+  #D#B#.#C#
+  #A#D#C#A#
+  #########
+
+#############
+#AA.....B.BD#
+###B#.#.#.###
+  #D#C#.#.#
+  #D#B#C#C#
+  #A#D#C#A#
+  #########
+
+#############
+#AA.....B.BD#
+###B#.#.#.###
+  #D#.#C#.#
+  #D#B#C#C#
+  #A#D#C#A#
+  #########
+
+#############
+#AA...B.B.BD#
+###B#.#.#.###
+  #D#.#C#.#
+  #D#.#C#C#
+  #A#D#C#A#
+  #########
+
+#############
+#AA.D.B.B.BD#
+###B#.#.#.###
+  #D#.#C#.#
+  #D#.#C#C#
+  #A#.#C#A#
+  #########
+
+#############
+#AA.D...B.BD#
+###B#.#.#.###
+  #D#.#C#.#
+  #D#.#C#C#
+  #A#B#C#A#
+  #########
+
+#############
+#AA.D.....BD#
+###B#.#.#.###
+  #D#.#C#.#
+  #D#B#C#C#
+  #A#B#C#A#
+  #########
+
+#############
+#AA.D......D#
+###B#.#.#.###
+  #D#B#C#.#
+  #D#B#C#C#
+  #A#B#C#A#
+  #########
+
+#############
+#AA.D......D#
+###B#.#C#.###
+  #D#B#C#.#
+  #D#B#C#.#
+  #A#B#C#A#
+  #########
+
+#############
+#AA.D.....AD#
+###B#.#C#.###
+  #D#B#C#.#
+  #D#B#C#.#
+  #A#B#C#.#
+  #########
+
+#############
+#AA.......AD#
+###B#.#C#.###
+  #D#B#C#.#
+  #D#B#C#.#
+  #A#B#C#D#
+  #########
+
+#############
+#AA.......AD#
+###.#B#C#.###
+  #D#B#C#.#
+  #D#B#C#.#
+  #A#B#C#D#
+  #########
+
+#############
+#AA.......AD#
+###.#B#C#.###
+  #.#B#C#.#
+  #D#B#C#D#
+  #A#B#C#D#
+  #########
+
+#############
+#AA.D.....AD#
+###.#B#C#.###
+  #.#B#C#.#
+  #.#B#C#D#
+  #A#B#C#D#
+  #########
+
+#############
+#A..D.....AD#
+###.#B#C#.###
+  #.#B#C#.#
+  #A#B#C#D#
+  #A#B#C#D#
+  #########
+
+#############
+#...D.....AD#
+###.#B#C#.###
+  #A#B#C#.#
+  #A#B#C#D#
+  #A#B#C#D#
+  #########
+
+#############
+#.........AD#
+###.#B#C#.###
+  #A#B#C#D#
+  #A#B#C#D#
+  #A#B#C#D#
+  #########
+
+#############
+#..........D#
+###A#B#C#.###
+  #A#B#C#D#
+  #A#B#C#D#
+  #A#B#C#D#
+  #########
+
+#############
+#...........#
+###A#B#C#D###
+  #A#B#C#D#
+  #A#B#C#D#
+  #A#B#C#D#
+  #########
+</code></pre>
+
+<p>Using the initial configuration from the full diagram, <em>what is the least energy required to organize the amphipods?</em></p>
