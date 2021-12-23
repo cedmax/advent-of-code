@@ -12,6 +12,7 @@
   "devDependencies": {
     "axios": "^0.24.0",
     "cheerio": "1.0.0-rc.10",
+    "clui-live": "^0.3.4",
     "dotenv": "^8.2.0",
     "fs-extra": "^10.0.0",
     "husky": "^7.0.4",
