@@ -48,3 +48,7 @@ function main(src) {
 }
 
 console.log(main(input))
+
+// I'm not including the code as it's not mine: I cheated for part 2.
+// The answer was 10656, but I couldn't come up with it myself, it was
+// the only star missing and I knew I wouldn't go back to it later.

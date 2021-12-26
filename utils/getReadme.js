@@ -15,6 +15,23 @@ const defaultOptions = {
   }
 };
 
+const getFinal = async (year) => {
+  console.log(year, "fetch final");
+
+  const { data } = await axios.post(`https://adventofcode.com/${year}/day/25/answer`, "level=2&answer=0", {
+    ...defaultOptions
+  });
+
+  const $ = cheerio.load(data);
+  let html = $("article p").toArray();
+  html.length = 3;
+
+  html = html.map((i) => $(i).html()).join("\n\n");
+
+  const readme = `../${year}/Readme.md`;
+  await fse.outputFile(readme, html);
+};
+
 const getReadme = async (year, day, file) => {
   console.log(year, day, "fetch readme");
 
@@ -68,9 +85,13 @@ const fetch = async (day, year) => {
   //   }
   // }
 
+  const finalDate = date.getDate() > 25 ? 25 : date.getDate();
   if (date.getMonth() === 11) {
-    for (let day = 1; day <= date.getDate(); day++) {
+    for (let day = 1; day <= finalDate; day++) {
       await fetch(day, currentYear);
     }
+  }
+  if (finalDate === 25) {
+    await getFinal(currentYear);
   }
 })();

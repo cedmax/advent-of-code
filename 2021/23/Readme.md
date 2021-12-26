@@ -297,5 +297,4 @@
   #A#B#C#D#
   #########
 </code></pre>
-
 <p>Using the initial configuration from the full diagram, <em>what is the least energy required to organize the amphipods?</em></p>

@@ -42,3 +42,6 @@ mod w 2
 <p>Then, after MONAD has finished running all of its instructions, it will indicate that the model number was <em>valid</em> by leaving a <code>0</code> in variable <code>z</code>. However, if the model number was <em>invalid</em>, it will leave some other non-zero value in <code>z</code>.</p>
 <p>MONAD imposes additional, mysterious restrictions on model numbers, and legend says the last copy of the MONAD documentation was eaten by a <a href="https://en.wikipedia.org/wiki/Japanese_raccoon_dog" target="_blank">tanuki</a>. You'll need to <em>figure out what MONAD does</em> some other way.</p>
 <p>To enable as many submarine features as possible, find the largest valid fourteen-digit model number that contains no <code>0</code> digits. <em>What is the largest model number accepted by MONAD?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>As the submarine starts booting up things like the <a href="https://www.youtube.com/watch?v=RXJKdh1KZ0w" target="_blank">Retro Encabulator</a>, you realize that maybe you don't need all these submarine features after all.</p>
+<p><em>What is the smallest model number accepted by MONAD?</em></p>
