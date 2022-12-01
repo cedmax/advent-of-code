@@ -2,6 +2,10 @@
 
 My poorly coded\*, all javascript solutions to [Advent of Code](https://adventofcode.com/) problems.
 
+## 2022
+
+- [`01` ⭐⭐](./2022/01)
+
 ## 2021
 
 - [`01` ⭐⭐](./2021/01)
