@@ -5,6 +5,8 @@ My poorly coded\*, all javascript solutions to [Advent of Code](https://adventof
 ## 2022
 
 - [`01` ⭐⭐](./2022/01)
+- [`02` ⭐⭐](./2022/02)
+- [`03` ⭐⭐](./2022/03)
 
 ## 2021
 
