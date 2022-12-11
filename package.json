@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "fetch": "node utils/getReadme.js",
+    "open": "node utils/open.js",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -17,6 +18,7 @@
     "fs-extra": "^10.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.4",
+    "open": "^8.4.0",
     "prettier": "^2.5.1"
   },
   "lint-staged": {
