@@ -31,3 +31,9 @@ hmdt: 32
 <p>Then, monkey <code>sjmn</code> has one of its numbers (<code>30</code>, from monkey <code>drzm</code>), and already has its other number, <code>5</code>, from <code>dbpl</code>. This allows it to yell its own number by finding <code>30</code> multiplied by <code>5</code>: <code><em>150</em></code>.</p>
 <p>This process continues until <code>root</code> yells a number: <code><em>152</em></code>.</p>
 <p>However, your actual situation involves <span title="Advent of Code 2022: Now With Considerably More Monkeys">considerably more monkeys</span>. <em>What number will the monkey named <code>root</code> yell?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>Due to some kind of monkey-elephant-human mistranslation, you seem to have misunderstood a few key details about the riddle.</p>
+<p>First, you got the wrong job for the monkey named <code>root</code>; specifically, you got the wrong math operation. The correct operation for monkey <code>root</code> should be <code>=</code>, which means that it still listens for two numbers (from the same two monkeys as before), but now checks that the two numbers <em>match</em>.</p>
+<p>Second, you got the wrong monkey for the job starting with <code>humn:</code>. It isn't a monkey - it's <em>you</em>. Actually, you got the job wrong, too: you need to figure out <em>what number you need to yell</em> so that <code>root</code>'s equality check passes. (The number that appears after <code>humn:</code> in your input is now irrelevant.)</p>
+<p>In the above example, the number you need to yell to pass <code>root</code>'s equality test is <code><em>301</em></code>. (This causes <code>root</code> to get the same number, <code>150</code>, from both of its monkeys.)</p>
+<p><em>What number do you yell to pass <code>root</code>'s equality test?</em></p>
