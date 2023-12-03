@@ -35,14 +35,18 @@ const getTokens = (input) => {
   return tokens;
 };
 
+const data = getData(input);
+const tokens = getTokens(input);
+
 const isAdjecentY = (matchY, tokenY) => matchY <= tokenY + 1 && matchY >= tokenY - 1;
 const isAdjecentX = (startX, endX, tokenX) => startX <= tokenX + 1 && endX >= tokenX - 1;
+const isAdjecent = ({ start, end, line }, tokenX, tokenY) => isAdjecentX(start, end, tokenX) && isAdjecentY(line, tokenY);
 
 const sumAdjecents = (tokens, data) => {
   data = JSON.parse(JSON.stringify(data));
   tokens.forEach(({ idx: tokenX, line: tokenY }) => {
     data.forEach((item, i) => {
-      if (isAdjecentX(item.start, item.end, tokenX) && isAdjecentY(item.line, tokenY)) {
+      if (isAdjecent(item, tokenX, tokenY)) {
         data[i].toAdd = true;
       }
     });
@@ -50,24 +54,12 @@ const sumAdjecents = (tokens, data) => {
   return data.reduce((acc, item) => (item.toAdd ? acc + Number(item.match) : acc), 0);
 };
 
-const data = getData(input);
-const tokens = getTokens(input);
-
 console.log(sumAdjecents(tokens, data));
 
 const sumGears = (tokens, data) => {
   return tokens
     .map(({ idx: tokenX, line: tokenY }) => {
-      const tokenMatches = data
-        .map((item, i) => {
-          const matches = [];
-          if (isAdjecentX(item.start, item.end, tokenX) && isAdjecentY(item.line, tokenY)) {
-            matches.push(item);
-          }
-          return matches;
-        })
-        .filter((arr) => arr.length > 0)
-        .flat();
+      const tokenMatches = data.filter((item) => isAdjecent(item, tokenX, tokenY));
       return tokenMatches.length === 2 ? tokenMatches.reduce((acc, item) => acc * Number(item.match), 1) : 0;
     })
     .reduce((acc, item) => acc + item, 0);
