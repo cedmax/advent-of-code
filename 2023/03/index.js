@@ -54,3 +54,23 @@ const data = getData(input);
 const tokens = getTokens(input);
 
 console.log(sumAdjecents(tokens, data));
+
+const sumGears = (tokens, data) => {
+  return tokens
+    .map(({ idx: tokenX, line: tokenY }) => {
+      const tokenMatches = data
+        .map((item, i) => {
+          const matches = [];
+          if (isAdjecentX(item.start, item.end, tokenX) && isAdjecentY(item.line, tokenY)) {
+            matches.push(item);
+          }
+          return matches;
+        })
+        .filter((arr) => arr.length > 0)
+        .flat();
+      return tokenMatches.length === 2 ? tokenMatches.reduce((acc, item) => acc * Number(item.match), 1) : 0;
+    })
+    .reduce((acc, item) => acc + item, 0);
+};
+
+console.log(sumGears(tokens, data));
