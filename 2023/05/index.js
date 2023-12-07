@@ -68,7 +68,6 @@ const drillDown = ({ seeds, ...map }) => {
           }
         }
 
-        // console.log(key.split("-to-")[1], next);
         return next;
       }, next)
     );
