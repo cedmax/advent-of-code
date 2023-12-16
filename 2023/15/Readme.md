@@ -52,3 +52,82 @@
 </ul>
 <p>In this example, the sum of these results is <code><em>1320</em></code>. Unfortunately, the reindeer has stolen the page containing the expected verification number and is currently running around the facility with it excitedly.</p>
 <p>Run the HASH algorithm on each step in the initialization sequence. <em>What is the sum of the results?</em> (The initialization sequence is one long line; be careful when copy-pasting it.)</p>
+
+<h2 id="part2">--- Part Two ---</h2><p>You convince the reindeer to bring you the page; the page confirms that your HASH algorithm is working.</p>
+<p>The book goes on to describe a series of 256 <em>boxes</em> numbered <code>0</code> through <code>255</code>. The boxes are arranged in a line starting from the point where light enters the facility. The boxes have holes that allow light to pass from one box to the next all the way down the line.</p>
+<pre><code>      +-----+  +-----+         +-----+
+Light | Box |  | Box |   ...   | Box |
+-----------------------------------------&gt;
+      |  0  |  |  1  |   ...   | 255 |
+      +-----+  +-----+         +-----+
+</code></pre>
+<p>Inside each box, there are several <em>lens slots</em> that will keep a lens correctly positioned to focus light passing through the box. The side of each box has a panel that opens to allow you to insert or remove lenses as necessary.</p>
+<p>Along the wall running parallel to the boxes is a large library containing lenses organized by <em>focal length</em> ranging from <code>1</code> through <code>9</code>. The reindeer also brings you a small handheld <a href="https://en.wikipedia.org/wiki/Label_printer" target="_blank">label printer</a>.</p>
+<p>The book goes on to explain how to perform each step in the initialization sequence, a process it calls the Holiday ASCII String Helper Manual Arrangement Procedure, or <em>HASHMAP</em> for short.</p>
+<p>Each step begins with a sequence of letters that indicate the <em>label</em> of the lens on which the step operates. The result of running the HASH algorithm on the label indicates the correct box for that step.</p>
+<p>The label will be immediately followed by a character that indicates the <em>operation</em> to perform: either an equals sign (<code>=</code>) or a dash (<code>-</code>).</p>
+<p>If the operation character is a <em>dash</em> (<code>-</code>), go to the relevant box and remove the lens with the given label if it is present in the box. Then, move any remaining lenses as far forward in the box as they can go without changing their order, filling any space made by removing the indicated lens. (If no lens in that box has the given label, nothing happens.)</p>
+<p>If the operation character is an <em>equals sign</em> (<code>=</code>), it will be followed by a number indicating the <em>focal length</em> of the lens that needs to go into the relevant box; be sure to use the label maker to mark the lens with the label given in the beginning of the step so you can find it later. There are two possible situations:</p>
+<ul>
+<li>If there is already a lens in the box with the same label, <em>replace the old lens</em> with the new lens: remove the old lens and put the new lens in its place, not moving any other lenses in the box.</li>
+<li>If there is <em>not</em> already a lens in the box with the same label, add the lens to the box immediately behind any lenses already in the box. Don't move any of the other lenses when you do this. If there aren't any lenses in the box, the new lens goes all the way to the front of the box.</li>
+</ul>
+<p>Here is the contents of every box after each step in the example initialization sequence above:</p>
+<pre><code>After "rn=1":
+Box 0: [rn 1]
+
+After "cm-":
+Box 0: [rn 1]
+
+After "qp=3":
+Box 0: [rn 1]
+Box 1: [qp 3]
+
+After "cm=2":
+Box 0: [rn 1] [cm 2]
+Box 1: [qp 3]
+
+After "qp-":
+Box 0: [rn 1] [cm 2]
+
+After "pc=4":
+Box 0: [rn 1] [cm 2]
+Box 3: [pc 4]
+
+After "ot=9":
+Box 0: [rn 1] [cm 2]
+Box 3: [pc 4] [ot 9]
+
+After "ab=5":
+Box 0: [rn 1] [cm 2]
+Box 3: [pc 4] [ot 9] [ab 5]
+
+After "pc-":
+Box 0: [rn 1] [cm 2]
+Box 3: [ot 9] [ab 5]
+
+After "pc=6":
+Box 0: [rn 1] [cm 2]
+Box 3: [ot 9] [ab 5] [pc 6]
+
+After "ot=7":
+Box 0: [rn 1] [cm 2]
+Box 3: [ot 7] [ab 5] [pc 6]
+</code></pre>
+<p>All 256 boxes are always present; only the boxes that contain any lenses are shown here. Within each box, lenses are listed from front to back; each lens is shown as its label and focal length in square brackets.</p>
+<p>To confirm that all of the lenses are installed correctly, add up the <em>focusing power</em> of all of the lenses. The focusing power of a single lens is the result of multiplying together:</p>
+<ul>
+<li>One plus the box number of the lens in question.</li>
+<li>The slot number of the lens within the box: <code>1</code> for the first lens, <code>2</code> for the second lens, and so on.</li>
+<li>The focal length of the lens.</li>
+</ul>
+<p>At the end of the above example, the focusing power of each lens is as follows:</p>
+<ul>
+<li><code>rn</code>: <code>1</code> (box 0) * <code>1</code> (first slot) * <code>1</code> (focal length) = <code><em>1</em></code></li>
+<li><code>cm</code>: <code>1</code> (box 0) * <code>2</code> (second slot) * <code>2</code> (focal length) = <code><em>4</em></code></li>
+<li><code>ot</code>: <code>4</code> (box 3) * <code>1</code> (first slot) * <code>7</code> (focal length) = <code><em>28</em></code></li>
+<li><code>ab</code>: <code>4</code> (box 3) * <code>2</code> (second slot) * <code>5</code> (focal length) = <code><em>40</em></code></li>
+<li><code>pc</code>: <code>4</code> (box 3) * <code>3</code> (third slot) * <code>6</code> (focal length) = <code><em>72</em></code></li>
+</ul>
+<p>So, the above example ends up with a total focusing power of <code><em>145</em></code>.</p>
+<p>With the help of an over-enthusiastic reindeer in a hard hat, follow the initialization sequence. <em>What is the focusing power of the resulting lens configuration?</em></p>
