@@ -42,3 +42,26 @@ U 2 (#7a21e3)
 </code></pre>
 <p>Now, the lagoon can contain a much more respectable <code><em>62</em></code> cubic meters of lava. While the interior is dug out, the edges are also painted according to the color codes in the dig plan.</p>
 <p>The Elves are concerned the lagoon won't be large enough; if they follow their dig plan, <em>how many cubic meters of lava could it hold?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>The Elves were right to be concerned; the planned lagoon would be <em>much too small</em>.</p>
+<p>After a few minutes, someone realizes what happened; someone <em><span title="Futuristic sprintf()?">swapped</span> the color and instruction parameters</em> when producing the dig plan. They don't have time to fix the bug; one of them asks if you can <em>extract the correct instructions</em> from the hexadecimal codes.</p>
+<p>Each hexadecimal code is <em>six hexadecimal digits</em> long. The first five hexadecimal digits encode the <em>distance in meters</em> as a five-digit hexadecimal number. The last hexadecimal digit encodes the <em>direction to dig</em>: <code>0</code> means <code>R</code>, <code>1</code> means <code>D</code>, <code>2</code> means <code>L</code>, and <code>3</code> means <code>U</code>.</p>
+<p>So, in the above example, the hexadecimal codes can be converted into the true instructions:</p>
+<ul>
+<li><code>#70c710</code> = <code>R 461937</code></li>
+<li><code>#0dc571</code> = <code>D 56407</code></li>
+<li><code>#5713f0</code> = <code>R 356671</code></li>
+<li><code>#d2c081</code> = <code>D 863240</code></li>
+<li><code>#59c680</code> = <code>R 367720</code></li>
+<li><code>#411b91</code> = <code>D 266681</code></li>
+<li><code>#8ceee2</code> = <code>L 577262</code></li>
+<li><code>#caa173</code> = <code>U 829975</code></li>
+<li><code>#1b58a2</code> = <code>L 112010</code></li>
+<li><code>#caa171</code> = <code>D 829975</code></li>
+<li><code>#7807d2</code> = <code>L 491645</code></li>
+<li><code>#a77fa3</code> = <code>U 686074</code></li>
+<li><code>#015232</code> = <code>L 5411</code></li>
+<li><code>#7a21e3</code> = <code>U 500254</code></li>
+</ul>
+<p>Digging out this loop and its interior produces a lagoon that can hold an impressive <code><em>952408144115</em></code> cubic meters of lava.</p>
+<p>Convert the hexadecimal color codes into the correct instructions; if the Elves follow this new dig plan, <em>how many cubic meters of lava could the lagoon hold?</em></p>
