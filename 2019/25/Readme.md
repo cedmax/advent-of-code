@@ -2,7 +2,7 @@
 <p>First, that you might be too late: the internal temperature is <span title="This is the same in Fahrenheit and Celsius."><code>-40</code> degrees</span>.</p>
 <p>Second, that one faint life signature is somewhere on the ship.</p>
 <p>The airlock door is locked with a code; your best option is to send in a small droid to investigate the situation.  You attach your ship to Santa's, break a small hole in the hull, and let the droid run in before you seal it up again. Before your ship starts freezing, you detach your ship and set it to automatically stay within range of Santa's ship.</p>
-<p>This droid can follow basic instructions and report on its surroundings; you can communicate with it through an <a href="https://github.com/cedmax/advent-of-code/tree/main/2019/9">Intcode</a> program (your puzzle input) running on an <a href="https://github.com/cedmax/advent-of-code/tree/main/2019/17">ASCII-capable</a> computer.</p>
+<p>This droid can follow basic instructions and report on its surroundings; you can communicate with it through an <a href="9">Intcode</a> program (your puzzle input) running on an <a href="17">ASCII-capable</a> computer.</p>
 <p>As the droid moves through its environment, it will describe what it encounters.  When it says <code>Command?</code>, you can give it a single instruction terminated with a newline (ASCII code <code>10</code>). Possible instructions are:</p>
 <ul>
 <li><em>Movement</em> via <code>north</code>, <code>south</code>, <code>east</code>, or <code>west</code>.</li>

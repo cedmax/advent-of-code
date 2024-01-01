@@ -1,4 +1,4 @@
-<h2>--- Day 18: Like a GIF For Your Yard ---</h2><p>After the <a href="https://github.com/cedmax/advent-of-code/tree/main/2015/6">million lights incident</a>, the fire code has gotten stricter: now, at most <span title="This is an outrage!  We're going to the next town hall meeting.">ten thousand lights</span> are allowed.  You arrange them in a 100x100 grid.</p>
+<h2>--- Day 18: Like a GIF For Your Yard ---</h2><p>After the <a href="6">million lights incident</a>, the fire code has gotten stricter: now, at most <span title="This is an outrage!  We're going to the next town hall meeting.">ten thousand lights</span> are allowed.  You arrange them in a 100x100 grid.</p>
 <p>Never one to let you down, Santa again mails you instructions on the ideal lighting configuration.  With so few lights, he says, you'll have to resort to <em>animation</em>.</p>
 <p>Start by setting your lights to the included initial configuration (your puzzle input).  A <code>#</code> means "on", and a <code>.</code> means "off".</p>
 <p>Then, animate your grid in steps, where each step decides the next configuration based on the current one.  Each light's next state (either on or off) depends on its current state and the current states of the eight lights adjacent to it (including diagonals).  Lights on the edge of the grid might have fewer than eight neighbors; the missing ones always count as "off".</p>
@@ -57,6 +57,5 @@ After 4 steps:
 ......
 ......
 </code></pre>
-
 <p>After <code>4</code> steps, this example has four lights on.</p>
 <p>In your grid of 100x100 lights, given your initial configuration, <em>how many lights are on after 100 steps</em>?</p>

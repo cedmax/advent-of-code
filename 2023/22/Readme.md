@@ -1,0 +1,103 @@
+<h2>--- Day 22: Sand Slabs ---</h2><p>Enough sand has fallen; it can finally filter water for Snow Island.</p>
+<p>Well, <em>almost</em>.</p>
+<p>The sand has been falling as large compacted <em>bricks</em> of sand, piling up to form an impressive stack here near the edge of Island Island. In order to make use of the sand to filter water, some of the bricks will need to be broken apart - nay, <em><span title="Disintegrate - X,R
+Sorcery
+Destroy X target bricks of sand. They cannot be regenerated. Create 32768 0/1 colorless Sand artifact creature tokens for each brick of sand destroyed in this way.">disintegrated</span></em> - back into freely flowing sand.</p>
+<p>The stack is tall enough that you'll have to be careful about choosing which bricks to disintegrate; if you disintegrate the wrong brick, large portions of the stack could topple, which sounds pretty dangerous.</p>
+<p>The Elves responsible for water filtering operations took a <em>snapshot of the bricks while they were still falling</em> (your puzzle input) which should let you work out which bricks are safe to disintegrate. For example:</p>
+<pre><code>1,0,1~1,2,1
+0,0,2~2,0,2
+0,2,3~2,2,3
+0,0,4~0,2,4
+2,0,5~2,2,5
+0,1,6~2,1,6
+1,1,8~1,1,9
+</code></pre>
+<p>Each line of text in the snapshot represents the position of a single brick at the time the snapshot was taken. The position is given as two <code>x,y,z</code> coordinates - one for each end of the brick - separated by a tilde (<code>~</code>). Each brick is made up of a single straight line of cubes, and the Elves were even careful to choose a time for the snapshot that had all of the free-falling bricks at <em>integer positions above the ground</em>, so the whole snapshot is aligned to a three-dimensional cube grid.</p>
+<p>A line like <code>2,2,2~2,2,2</code> means that both ends of the brick are at the same coordinate - in other words, that the brick is a single cube.</p>
+<p>Lines like <code>0,0,10~1,0,10</code> or <code>0,0,10~0,1,10</code> both represent bricks that are <em>two cubes</em> in volume, both oriented horizontally. The first brick extends in the <code>x</code> direction, while the second brick extends in the <code>y</code> direction.</p>
+<p>A line like <code>0,0,1~0,0,10</code> represents a <em>ten-cube brick</em> which is oriented <em>vertically</em>. One end of the brick is the cube located at <code>0,0,1</code>, while the other end of the brick is located directly above it at <code>0,0,10</code>.</p>
+<p>The ground is at <code>z=0</code> and is perfectly flat; the lowest <code>z</code> value a brick can have is therefore <code>1</code>. So, <code>5,5,1~5,6,1</code> and <code>0,2,1~0,2,5</code> are both resting on the ground, but <code>3,3,2~3,3,3</code> was above the ground at the time of the snapshot.</p>
+<p>Because the snapshot was taken while the bricks were still falling, some bricks will <em>still be in the air</em>; you'll need to start by figuring out where they will end up. Bricks are magically stabilized, so they <em>never rotate</em>, even in weird situations like where a long horizontal brick is only supported on one end. Two bricks cannot occupy the same position, so a falling brick will come to rest upon the first other brick it encounters.</p>
+<p>Here is the same example again, this time with each brick given a letter so it can be marked in diagrams:</p>
+<pre><code>1,0,1~1,2,1   &lt;- A
+0,0,2~2,0,2   &lt;- B
+0,2,3~2,2,3   &lt;- C
+0,0,4~0,2,4   &lt;- D
+2,0,5~2,2,5   &lt;- E
+0,1,6~2,1,6   &lt;- F
+1,1,8~1,1,9   &lt;- G
+</code></pre>
+<p>At the time of the snapshot, from the side so the <code>x</code> axis goes left to right, these bricks are arranged like this:</p>
+<pre><code> x
+012
+.G. 9
+.G. 8
+... 7
+FFF 6
+..E 5 z
+D.. 4
+CCC 3
+BBB 2
+.A. 1
+--- 0
+</code></pre>
+<p>Rotating the perspective 90 degrees so the <code>y</code> axis now goes left to right, the same bricks are arranged like this:</p>
+<pre><code> y
+012
+.G. 9
+.G. 8
+... 7
+.F. 6
+EEE 5 z
+DDD 4
+..C 3
+B.. 2
+AAA 1
+--- 0
+</code></pre>
+<p>Once all of the bricks fall downward as far as they can go, the stack looks like this, where <code>?</code> means bricks are hidden behind other bricks at that location:</p>
+<pre><code> x
+012
+.G. 6
+.G. 5
+FFF 4
+D.E 3 z
+??? 2
+.A. 1
+--- 0
+</code></pre>
+<p>Again from the side:</p>
+<pre><code> y
+012
+.G. 6
+.G. 5
+.F. 4
+??? 3 z
+B.C 2
+AAA 1
+--- 0
+</code></pre>
+<p>Now that all of the bricks have settled, it becomes easier to tell which bricks are supporting which other bricks:</p>
+<ul>
+<li>Brick <code>A</code> is the only brick supporting bricks <code>B</code> and <code>C</code>.</li>
+<li>Brick <code>B</code> is one of two bricks supporting brick <code>D</code> and brick <code>E</code>.</li>
+<li>Brick <code>C</code> is the other brick supporting brick <code>D</code> and brick <code>E</code>.</li>
+<li>Brick <code>D</code> supports brick <code>F</code>.</li>
+<li>Brick <code>E</code> also supports brick <code>F</code>.</li>
+<li>Brick <code>F</code> supports brick <code>G</code>.</li>
+<li>Brick <code>G</code> isn't supporting any bricks.</li>
+</ul>
+<p>Your first task is to figure out <em>which bricks are safe to disintegrate</em>. A brick can be safely disintegrated if, after removing it, <em>no other bricks</em> would fall further directly downward. Don't actually disintegrate any bricks - just determine what would happen if, for each brick, only that brick were disintegrated. Bricks can be disintegrated even if they're completely surrounded by other bricks; you can squeeze between bricks if you need to.</p>
+<p>In this example, the bricks can be disintegrated as follows:</p>
+<ul>
+<li>Brick <code>A</code> cannot be disintegrated safely; if it were disintegrated, bricks <code>B</code> and <code>C</code> would both fall.</li>
+<li>Brick <code>B</code> <em>can</em> be disintegrated; the bricks above it (<code>D</code> and <code>E</code>) would still be supported by brick <code>C</code>.</li>
+<li>Brick <code>C</code> <em>can</em> be disintegrated; the bricks above it (<code>D</code> and <code>E</code>) would still be supported by brick <code>B</code>.</li>
+<li>Brick <code>D</code> <em>can</em> be disintegrated; the brick above it (<code>F</code>) would still be supported by brick <code>E</code>.</li>
+<li>Brick <code>E</code> <em>can</em> be disintegrated; the brick above it (<code>F</code>) would still be supported by brick <code>D</code>.</li>
+<li>Brick <code>F</code> cannot be disintegrated; the brick above it (<code>G</code>) would fall.</li>
+<li>Brick <code>G</code> <em>can</em> be disintegrated; it does not support any other bricks.</li>
+</ul>
+<p>So, in this example, <code><em>5</em></code> bricks can be safely disintegrated.</p>
+<p>Figure how the blocks will settle based on the snapshot. Once they've settled, consider disintegrating a single brick; <em>how many bricks could be safely chosen as the one to get disintegrated?</em></p>

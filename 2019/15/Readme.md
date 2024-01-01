@@ -1,6 +1,6 @@
 <h2>--- Day 15: Oxygen System ---</h2><p>Out here in deep space, many things can go wrong. Fortunately, many of those things have <span title="Which indicator lights indicate when the indicator lights have failed?">indicator lights</span>. Unfortunately, one of those lights is lit: the oxygen system for part of the ship has failed!</p>
 <p>According to the readouts, the oxygen system must have failed days ago after a rupture in oxygen tank two; that section of the ship was automatically sealed once oxygen levels went dangerously low. A single remotely-operated <em>repair droid</em> is your only option for fixing the oxygen system.</p>
-<p>The Elves' care package included an <a href="https://github.com/cedmax/advent-of-code/tree/main/2019/9">Intcode</a> program (your puzzle input) that you can use to remotely control the repair droid. By running that program, you can direct the repair droid to the oxygen system and fix the problem.</p>
+<p>The Elves' care package included an <a href="9">Intcode</a> program (your puzzle input) that you can use to remotely control the repair droid. By running that program, you can direct the repair droid to the oxygen system and fix the problem.</p>
 <p>The remote control program executes the following steps in a loop forever:</p>
 <ul>
 <li>Accept a <em>movement command</em> via an input instruction.</li>

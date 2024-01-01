@@ -2,7 +2,7 @@
 <p>While experimenting further with the tractor beam, you accidentally pull an asteroid directly into your ship!  It deals significant damage to your hull and causes your ship to begin tumbling violently.</p>
 <p>You can send a droid out to investigate, but the tumbling is causing enough <a href="https://en.wikipedia.org/wiki/Artificial_gravity">artificial gravity</a> that one wrong step could send the droid through a hole in the hull and flying out into space.</p>
 <p>The clear choice for this mission is a <span title="I picture the Bouncy enemy from Kirby games.">droid</span> that can <em>jump</em> over the holes in the hull - a <em>springdroid</em>.</p>
-<p>You can use an <a href="https://github.com/cedmax/advent-of-code/tree/main/2019/9">Intcode</a> program (your puzzle input) running on an <a href="https://github.com/cedmax/advent-of-code/tree/main/2019/17">ASCII-capable</a> computer to <a href="https://en.wikipedia.org/wiki/Programmable_read-only_memory">program</a> the springdroid. However, springdroids don't run Intcode; instead, they run a simplified assembly language called <em>springscript</em>.</p>
+<p>You can use an <a href="9">Intcode</a> program (your puzzle input) running on an <a href="17">ASCII-capable</a> computer to <a href="https://en.wikipedia.org/wiki/Programmable_read-only_memory">program</a> the springdroid. However, springdroids don't run Intcode; instead, they run a simplified assembly language called <em>springscript</em>.</p>
 <p>While a springdroid is certainly capable of navigating the artificial gravity and giant holes, it has one downside: it can only remember at most <em>15</em> springscript instructions.</p>
 <p>The springdroid will move forward automatically, constantly thinking about <em>whether to jump</em>.  The springscript program defines the logic for this decision.</p>
 <p>Springscript programs only use <a href="https://en.wikipedia.org/wiki/Boolean_data_type">Boolean values</a>, not numbers or strings.  Two registers are available: <code>T</code>, the <em>temporary value</em> register, and <code>J</code>, the <em>jump</em> register.  If the jump register is <em>true</em> at the end of the springscript program, the springdroid will try to jump. Both of these registers start with the value <em>false</em>.</p>
@@ -61,8 +61,8 @@ WALK
 
 .................
 .................
-................. #####<em>@</em>###########
+.................
+#####<em>@</em>###########
 </code></pre>
-
 <p>However, if the springdroid successfully makes it across, it will use an output instruction to indicate the <em>amount of damage to the hull</em> as a single giant integer outside the normal ASCII range.</p>
 <p>Program the springdroid with logic that allows it to survey the hull without falling into space.  <em>What amount of hull damage does it report?</em></p>

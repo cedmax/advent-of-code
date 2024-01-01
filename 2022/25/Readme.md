@@ -69,3 +69,8 @@
 <p>As you go to input this number on Bob's console, you discover that some buttons you expected are missing. Instead, you are met with buttons labeled <code>=</code>, <code>-</code>, <code>0</code>, <code>1</code>, and <code>2</code>. Bob needs the input value expressed as a SNAFU number, not in decimal.</p>
 <p>Reversing the process, you can determine that for the decimal number <code>4890</code>, the SNAFU number you need to supply to Bob's console is <code><em>2=-1=0</em></code>.</p>
 <p>The Elves are starting to get cold. <em>What SNAFU number do you supply to Bob's console?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>The <span title="You notice an engraving on the equipment: Balanced Quinary Industries.">hot air balloons</span> quickly carry you to the North Pole. As soon as you land, most of the expedition is escorted directly to a small building attached to the reindeer stables.</p>
+<p>The <em>head smoothie chef</em> has just finished warming up the industrial-grade smoothie blender as you arrive. It will take <em class="star">50 stars</em> to fill the blender. The expedition Elves turn their attention to you, and you begin emptying the fruit from your pack onto the table.</p>
+<p>As you do, a very young Elf - one you recognize from the expedition team - approaches the table and holds up a single <em class="star">star</em> fruit he found. The head smoothie chef places it in the blender.</p>
+<p>Only <em class="star">49 stars</em> to go.</p>
