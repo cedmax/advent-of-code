@@ -7,3 +7,8 @@
 <li><code>15</code>, <code>5</code>, and <code>5</code></li>
 </ul>
 <p>Filling all containers entirely, how many different <em>combinations of containers</em> can exactly fit all <code>150</code> liters of eggnog?</p>
+
+<h2 id="part2">--- Part Two ---</h2><p>While playing with all the containers in the kitchen, another load of eggnog <span title="Apparently, Amazon ships to the North Pole now.">arrives</span>!  The shipping and receiving department is requesting as many containers as you can spare.</p>
+<p>Find the minimum number of containers that can exactly fit all <code>150</code> liters of eggnog.  <em>How many different ways</em> can you fill that number of containers and still hold exactly <code>150</code> litres?</p>
+<p>In the example above, the minimum number of containers was two.  There were three ways to use that many containers, and so the answer there would be <code>3</code>.</p>
+<p></p>
