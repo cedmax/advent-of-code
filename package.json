@@ -11,15 +11,15 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "axios": "^0.24.0",
+    "axios": "^1.6.7",
     "cheerio": "1.0.0-rc.10",
     "clui-live": "^0.3.4",
-    "dotenv": "^8.2.0",
-    "fs-extra": "^10.0.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.4",
-    "open": "^8.4.0",
-    "prettier": "^2.5.1"
+    "dotenv": "^8.6.0",
+    "fs-extra": "^10.1.0",
+    "husky": "^9.0.10",
+    "lint-staged": "^12.5.0",
+    "open": "^8.4.2",
+    "prettier": "^2.8.8"
   },
   "lint-staged": {
     "*.js": "prettier --write"
