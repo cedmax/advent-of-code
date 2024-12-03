@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "fetch": "node utils/getReadme.js",
-    "open": "node utils/open.js",
+    "open": "node utils/open.mjs",
     "prepare": "husky install"
   },
   "devDependencies": {
