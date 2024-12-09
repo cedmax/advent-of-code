@@ -57,11 +57,21 @@ const findBeams = (blockers, init, maxX, maxY) => {
         }
 
         if (blocker.chr === "/") {
-          newBeams.push({ x: move === "x" ? x : x - dir, y: move === "x" ? y - dir : y, move: move === "x" ? "y" : "x", dir: -dir });
+          newBeams.push({
+            x: move === "x" ? x : x - dir,
+            y: move === "x" ? y - dir : y,
+            move: move === "x" ? "y" : "x",
+            dir: -dir
+          });
         }
 
         if (blocker.chr === "\\") {
-          newBeams.push({ x: move === "x" ? x : x + dir, y: move === "x" ? y + dir : y, move: move === "x" ? "y" : "x", dir: dir });
+          newBeams.push({
+            x: move === "x" ? x : x + dir,
+            y: move === "x" ? y + dir : y,
+            move: move === "x" ? "y" : "x",
+            dir: dir
+          });
         }
         newBeams.forEach((newBeam) => {
           if (!beamscache.find((beam) => beam.x === newBeam.x && beam.y === newBeam.y && beam.move === newBeam.move && beam.dir === newBeam.dir)) {

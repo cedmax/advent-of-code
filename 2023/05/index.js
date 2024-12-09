@@ -34,7 +34,15 @@ const input = require("../../utils/getInput")(__dirname, { split: /(.+):/ });
 // 60 56 37
 // 56 93 4`.split(/(.+):/);
 
-const order = ["seed-to-soil", "soil-to-fertilizer", "fertilizer-to-water", "water-to-light", "light-to-temperature", "temperature-to-humidity", "humidity-to-location"];
+const order = [
+  "seed-to-soil",
+  "soil-to-fertilizer",
+  "fertilizer-to-water",
+  "water-to-light",
+  "light-to-temperature",
+  "temperature-to-humidity",
+  "humidity-to-location"
+];
 
 // via https://youmightnotneed.com/lodash#chunk (my site, not cheating)
 const chunk = (arr, chunkSize = 1, cache = []) => {

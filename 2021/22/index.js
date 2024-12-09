@@ -2,9 +2,10 @@ const input = require('../../utils/getInput')(__dirname, { split: '\n' }).map(
   line => {
     const {
       groups: { state, x, y, z },
-    } = /((?<state>on|off) x=(?<x>-?\d+\.\.-?\d+),y=(?<y>-?\d+\.\.-?\d+),z=(?<z>-?\d+\.\.-?\d+))/.exec(
-      line
-    )
+    } =
+      /((?<state>on|off) x=(?<x>-?\d+\.\.-?\d+),y=(?<y>-?\d+\.\.-?\d+),z=(?<z>-?\d+\.\.-?\d+))/.exec(
+        line
+      )
 
     return {
       s: state,

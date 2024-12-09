@@ -5,7 +5,7 @@ const input = require("../../utils/getInput")(__dirname, { split: "\n" }).map((l
     left: parseInt(left, 10),
     top: parseInt(top, 10),
     width: parseInt(width, 10),
-    height: parseInt(height, 10)
+    height: parseInt(height, 10),
   };
 });
 

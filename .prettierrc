@@ -1,6 +1,24 @@
 {
   "singleQuote": false,
   "semi": true,
-  "printWidth": 180,
-  "trailingComma": "none"
+  "printWidth": 160,
+  "trailingComma": "es5",
+  "overrides": [
+    {
+      "files": ["2015/**/*.js", "2019/**/*.js", "2020/**/*.js", "2021/**/*.js"],
+      "options": { "printWidth": 80 }
+    },
+    {
+      "files": ["2017/**/*.js", "2022/**/*.js", "2023/**/*.js", "2024/**/*.js"],
+      "options": { "trailingComma": "none" }
+    },
+    {
+      "files": ["2021/**/*.js"],
+      "options": {
+        "arrowParens": "avoid",
+        "semi": false,
+        "singleQuote": true
+      }
+    }
+  ]
 }

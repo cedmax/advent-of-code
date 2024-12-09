@@ -33,7 +33,7 @@ const input = require('../../utils/getInput')(__dirname, { split: '\n' }).map(
 const clone = input => [...input.map(i => [...i])]
 const print = input => input.map(i => `    ` + i.join('')).join('\n')
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-const getCharValue = chr => ({ A: 1, B: 10, C: 100, D: 1000 }[chr])
+const getCharValue = chr => ({ A: 1, B: 10, C: 100, D: 1000 })[chr]
 
 const move = ([x0, y0], [destX, destY]) => {
   y1 = y0

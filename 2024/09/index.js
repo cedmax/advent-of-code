@@ -7,7 +7,7 @@ const parseData = (input) =>
     return acc;
   }, []);
 
-const calcResult = (data) => data.flatMap(({ qty, val }) => Array.from({ length: qty }, () => (val === "." ? 0 : val))).reduce((acc, val, idx) => acc + val * idx, 0);
+const calcResult = (data) => data.flatMap(({ qty, val }) => [...Array(qty)].map(() => (val === "." ? 0 : val))).reduce((acc, val, idx) => acc + val * idx, 0);
 
 const firstPart = (input) => {
   const data = parseData(input);

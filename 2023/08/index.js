@@ -24,7 +24,10 @@ const parseMap = (map) => {
   }, {});
 };
 
-const parseInput = ([instructions, map]) => ({ instructions: instructions.split(""), map: parseMap(map) });
+const parseInput = ([instructions, map]) => ({
+  instructions: instructions.split(""),
+  map: parseMap(map)
+});
 
 const ref = {
   L: 0,
@@ -48,7 +51,12 @@ const navigateMap = ({ instructions, map }, { startEndsWith, endEndsWith }) => {
   }, []);
 };
 
-console.log(navigateMap(parseInput(input), { startEndsWith: "AAA", endEndsWith: "ZZZ" })[0]);
+console.log(
+  navigateMap(parseInput(input), {
+    startEndsWith: "AAA",
+    endEndsWith: "ZZZ"
+  })[0]
+);
 
 // const newInput = `LR
 

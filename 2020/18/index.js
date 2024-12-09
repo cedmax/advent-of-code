@@ -2,14 +2,14 @@ const input = require("../../utils/getInput")(__dirname, { split: "\n" });
 
 const parse = (input) =>
   input.map((line) => {
-    return eval(
-      `[${line
-        .replace(/\(/g, "[")
-        .replace(/\)/g, "]")
-        .replace(/ \+ /g, ",'+',")
-        .replace(/ \* /g, ",'*',")
-        .replace(/ \* /g, ",'*',")}]`
-    );
+    line = line
+      .replace(/\(/g, "[")
+      .replace(/\)/g, "]")
+      .replace(/ \+ /g, ",'+',")
+      .replace(/ \* /g, ",'*',")
+      .replace(/ \* /g, ",'*',");
+
+    return eval(`[${line}]`);
   });
 
 const resolveParentesis = (arr, total, operation = "+") => {

@@ -68,7 +68,10 @@ const firstPart = (map) => {
     } else {
       // added for part2, if we are in the same position as before and
       // about to go in the same direction, then it's a loop
-      if (path.length > 1 && path.find(({ pos: [stepX, stepY], direction: stepDirection }) => stepX === next[0] && stepY === next[1] && stepDirection === direction)) {
+      if (
+        path.length > 1 &&
+        path.find(({ pos: [stepX, stepY], direction: stepDirection }) => stepX === next[0] && stepY === next[1] && stepDirection === direction)
+      ) {
         return [];
       }
       path.push({ pos: next, direction });

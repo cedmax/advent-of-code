@@ -18,7 +18,12 @@ const getData = (input) => {
   const data = [];
   for (const [i, line] of input.entries()) {
     while ((match = numRe.exec(line)) != null) {
-      data.push({ match: match[0], start: match.index, end: match.index + match[0].length - 1, line: i });
+      data.push({
+        match: match[0],
+        start: match.index,
+        end: match.index + match[0].length - 1,
+        line: i
+      });
     }
   }
 
