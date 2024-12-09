@@ -20,3 +20,20 @@ UUUUD
 </ul>
 <p>So, in this example, the bathroom code is <code>1985</code>.</p>
 <p>Your puzzle input is the instructions from the document you found at the front desk. What is the <em>bathroom code</em>?</p>
+
+<h2 id="part2">--- Part Two ---</h2><p>You finally arrive at the bathroom (it's a several minute walk from the lobby so visitors can behold the many fancy conference rooms and water coolers on this floor) and go to punch in the code.  Much to your bladder's dismay, the keypad is not at all like you imagined it.  Instead, you are confronted with the result of hundreds of man-hours of <span title="User Group 143 found a diamond shape to be the most environmentally friendly.">bathroom-keypad-design meetings:</span></p>
+<pre><code>    1
+  2 3 4
+5 6 7 8 9
+  A B C
+    D
+</code></pre>
+<p>You still start at "5" and stop when you're at an edge, but given the same instructions as above, the outcome is very different:</p>
+<ul>
+<li>You start at "5" and don't move at all (up and left are both edges), ending at <code>5</code>.</li>
+<li>Continuing from "5", you move right twice and down three times (through "6", "7", "B", "D", "D"), ending at <code>D</code>.</li>
+<li>Then, from "D", you move five more times (through "D", "B", "C", "C", "B"), ending at <code>B</code>.</li>
+<li>Finally, after five more moves, you end at <code>3</code>.</li>
+</ul>
+<p>So, given the actual keypad layout, the code would be <code>5DB3</code>.</p>
+<p>Using the same instructions in your puzzle input, what is the correct <em>bathroom code</em>?</p>

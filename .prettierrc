@@ -9,7 +9,7 @@
       "options": { "printWidth": 80 }
     },
     {
-      "files": ["2017/**/*.js", "2022/**/*.js", "2023/**/*.js", "2024/**/*.js"],
+      "files": ["utils/*.js", "2017/**/*.js", "2022/**/*.js", "2023/**/*.js", "2024/**/*.js"],
       "options": { "trailingComma": "none" }
     },
     {

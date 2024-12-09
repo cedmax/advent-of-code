@@ -4,7 +4,6 @@ const cheerio = require("cheerio");
 const fse = require("fs-extra");
 
 process.chdir(__dirname);
-//const startYear = 2015;
 
 const indexTemplate = `const input = require('../../utils/getInput')(__dirname, { split: null });\n\nconsole.log(input)\nconsole.log('METHOD NOT IMPLEMENTED')`;
 
@@ -79,7 +78,7 @@ const fetch = async (day, year) => {
 (async () => {
   const date = new Date();
   const currentYear = date.getFullYear();
-  // for (let year = startYear; year < currentYear; year++) {
+  // for (let year = 2015; year < currentYear; year++) {
   //   for (let day = 1; day <= 25; day++) {
   //     await fetch(day, year);
   //   }
