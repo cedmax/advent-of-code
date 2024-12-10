@@ -59,3 +59,55 @@ After 4 steps:
 </code></pre>
 <p>After <code>4</code> steps, this example has four lights on.</p>
 <p>In your grid of 100x100 lights, given your initial configuration, <em>how many lights are on after 100 steps</em>?</p>
+
+<h2 id="part2">--- Part Two ---</h2><p>You flip the instructions over; Santa goes on to point out that this is all just an implementation of <a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life">Conway's Game of Life</a>.  At least, it was, until you notice that something's wrong with the grid of lights you bought: four lights, one in each corner, are <em>stuck on</em> and can't be turned off.  The example above will actually run like this:</p>
+<pre><code>Initial state:
+##.#.#
+...##.
+#....#
+..#...
+#.#..#
+####.#
+
+After 1 step:
+#.##.#
+####.#
+...##.
+......
+#...#.
+#.####
+
+After 2 steps:
+#..#.#
+#....#
+.#.##.
+...##.
+.#..##
+##.###
+
+After 3 steps:
+#...##
+####.#
+..##.#
+......
+##....
+####.#
+
+After 4 steps:
+#.####
+#....#
+...#..
+.##...
+#.....
+#.#..#
+
+After 5 steps:
+##.###
+.##..#
+.##...
+.##...
+#.#...
+##...#
+</code></pre>
+<p>After <code>5</code> steps, this example now has <code>17</code> lights on.</p>
+<p>In your grid of 100x100 lights, given your initial configuration, but with the four corners always in the <em>on</em> state, <em>how many lights are on after 100 steps</em>?</p>
