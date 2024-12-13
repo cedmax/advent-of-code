@@ -37,3 +37,7 @@
 <p>In the example above, Guard #10 spent the most minutes asleep, a total of 50 minutes (20+25+5), while Guard #99 only slept for a total of 30 minutes (10+10+10). Guard #<em>10</em> was asleep most during minute <em>24</em> (on two days, whereas any other minute the guard was asleep was only seen on one day).</p>
 <p>While this example listed the entries in chronological order, your entries are in the order you found them. You'll need to organize them before they can be analyzed.</p>
 <p><em>What is the ID of the guard you chose multiplied by the minute you chose?</em> (In the above example, the answer would be <code>10 * 24 = 240</code>.)</p>
+
+<h2 id="part2">--- Part Two ---</h2><p><em>Strategy 2:</em> Of all guards, which guard is most frequently asleep on the same minute?</p>
+<p>In the example above, Guard #<em>99</em> spent minute <em>45</em> asleep more than any other guard or minute - three times in total. (In all other cases, any guard spent any minute asleep at most twice.)</p>
+<p><em>What is the ID of the guard you chose multiplied by the minute you chose?</em> (In the above example, the answer would be <code>99 * 45 = 4455</code>.)</p>

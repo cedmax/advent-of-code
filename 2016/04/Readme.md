@@ -9,3 +9,9 @@
 </ul>
 <p>Of the real rooms from the list above, the sum of their sector IDs is <code>1514</code>.</p>
 <p>What is the <em>sum of the sector IDs of the real rooms</em>?</p>
+
+<h2 id="part2">--- Part Two ---</h2><p>With all the decoy data out of the way, it's time to decrypt this list and get moving.</p>
+<p>The room names are encrypted by a state-of-the-art <a href="https://en.wikipedia.org/wiki/Caesar_cipher">shift cipher</a>, which is nearly unbreakable without <span title="...or, like, half of a napkin.">the right software</span>. However, the information kiosk designers at Easter Bunny HQ were not expecting to deal with a master cryptographer like yourself.</p>
+<p>To decrypt a room name, rotate each letter forward through the alphabet a number of times equal to the room's sector ID.  <code>A</code> becomes <code>B</code>, <code>B</code> becomes <code>C</code>, <code>Z</code> becomes <code>A</code>, and so on. Dashes become spaces.</p>
+<p>For example, the real name for <code>qzmt-zixmtkozy-ivhz-343</code> is <code>very encrypted name</code>.</p>
+<p><em>What is the sector ID</em> of the room where North Pole objects are stored?</p>
