@@ -10,3 +10,7 @@
 <li><code>R5, L5, R5, R3</code> leaves you <code>12</code> blocks away.</li>
 </ul>
 <p><em>How many blocks away</em> is Easter Bunny HQ?</p>
+
+<h2 id="part2">--- Part Two ---</h2><p>Then, you notice the instructions continue on the back of the Recruiting Document.  Easter Bunny HQ is actually at the first location you visit twice.</p>
+<p>For example, if your instructions are <code>R8, R4, R4, R8</code>, the first location you visit twice is <code>4</code> blocks away, due East.</p>
+<p>How many blocks away is the <em>first location you visit twice</em>?</p>

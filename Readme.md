@@ -218,7 +218,7 @@ My poorly coded\*, all javascript solutions to [Advent of Code](https://adventof
 
 ## 2016
 
-- [`01`](./2016/01)
+- [`01` ⭐⭐](./2016/01)
 - [`02` ⭐⭐](./2016/02)
 - [`03` ⭐](./2016/03)
 - [`04` ⭐⭐](./2016/04)
