@@ -18,6 +18,7 @@ My poorly coded\*, all javascript solutions to [Advent of Code](https://adventof
 - [`12` ⭐⭐](./2024/12)
 - [`13` ⭐⭐](./2024/13)
 - [`14` ⭐⭐](./2024/14)
+- [`15` ⭐](./2024/15)
 
 
 ## 2023
