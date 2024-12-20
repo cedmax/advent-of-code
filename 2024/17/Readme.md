@@ -1,0 +1,41 @@
+<h2>--- Day 17: Chronospatial Computer ---</h2><p>The Historians push the button on their strange device, but this time, you all just feel like you're <a href="/2018/day/6">falling</a>.</p>
+<p>"Situation critical", the device announces in a familiar voice. "Bootstrapping process failed. Initializing debugger...."</p>
+<p>The small handheld device suddenly unfolds into an entire computer! The Historians look around nervously before one of them tosses it to you.</p>
+<p>This seems to be a 3-bit computer: its program is a list of 3-bit numbers (0 through 7), like <code>0,1,2,3</code>. The computer also has three <em>registers</em> named <code>A</code>, <code>B</code>, and <code>C</code>, but these registers aren't limited to 3 bits and can instead hold any integer.</p>
+<p>The computer knows <em>eight instructions</em>, each identified by a 3-bit number (called the instruction's <em>opcode</em>). Each instruction also reads the 3-bit number after it as an input; this is called its <em>operand</em>.</p>
+<p>A number called the <em>instruction pointer</em> identifies the position in the program from which the next opcode will be read; it starts at <code>0</code>, pointing at the first 3-bit number in the program. Except for jump instructions, the instruction pointer increases by <code>2</code> after each instruction is processed (to move past the instruction's opcode and its operand). If the computer tries to read an opcode past the end of the program, it instead <em>halts</em>.</p>
+<p>So, the program <code>0,1,2,3</code> would run the instruction whose opcode is <code>0</code> and pass it the operand <code>1</code>, then run the instruction having opcode <code>2</code> and pass it the operand <code>3</code>, then halt.</p>
+<p>There are two types of operands; each instruction specifies the type of its operand. The value of a <em>literal operand</em> is the operand itself. For example, the value of the literal operand <code>7</code> is the number <code>7</code>. The value of a <em>combo operand</em> can be found as follows:</p>
+<ul>
+<li>Combo operands <code>0</code> through <code>3</code> represent literal values <code>0</code> through <code>3</code>.</li>
+<li>Combo operand <code>4</code> represents the value of register <code>A</code>.</li>
+<li>Combo operand <code>5</code> represents the value of register <code>B</code>.</li>
+<li>Combo operand <code>6</code> represents the value of register <code>C</code>.</li>
+<li>Combo operand <code>7</code> is reserved and will not appear in valid programs.</li>
+</ul>
+<p>The eight instructions are as follows:</p>
+<p>The <code><em>adv</em></code> instruction (opcode <code><em>0</em></code>) performs <em>division</em>. The numerator is the value in the <code>A</code> register. The denominator is found by raising 2 to the power of the instruction's <em>combo</em> operand. (So, an operand of <code>2</code> would divide <code>A</code> by <code>4</code> (<code>2^2</code>); an operand of <code>5</code> would divide <code>A</code> by <code>2^B</code>.) The result of the division operation is <em>truncated</em> to an integer and then written to the <code>A</code> register.</p>
+<p>The <code><em>bxl</em></code> instruction (opcode <code><em>1</em></code>) calculates the <a href="https://en.wikipedia.org/wiki/Bitwise_operation#XOR" target="_blank">bitwise XOR</a> of register <code>B</code> and the instruction's <em>literal</em> operand, then stores the result in register <code>B</code>.</p>
+<p>The <code><em>bst</em></code> instruction (opcode <code><em>2</em></code>) calculates the value of its <em>combo</em> operand <a href="https://en.wikipedia.org/wiki/Modulo" target="_blank">modulo</a> 8 (thereby keeping only its lowest 3 bits), then writes that value to the <code>B</code> register.</p>
+<p>The <code><em>jnz</em></code> instruction (opcode <code><em>3</em></code>) does <em>nothing</em> if the <code>A</code> register is <code>0</code>. However, if the <code>A</code> register is <em>not zero</em>, it <span title="The instruction does this using a little trampoline."><em>jumps</em></span> by setting the instruction pointer to the value of its <em>literal</em> operand; if this instruction jumps, the instruction pointer is <em>not</em> increased by <code>2</code> after this instruction.</p>
+<p>The <code><em>bxc</em></code> instruction (opcode <code><em>4</em></code>) calculates the <em>bitwise XOR</em> of register <code>B</code> and register <code>C</code>, then stores the result in register <code>B</code>. (For legacy reasons, this instruction reads an operand but <em>ignores</em> it.)</p>
+<p>The <code><em>out</em></code> instruction (opcode <code><em>5</em></code>) calculates the value of its <em>combo</em> operand modulo 8, then <em>outputs</em> that value. (If a program outputs multiple values, they are separated by commas.)</p>
+<p>The <code><em>bdv</em></code> instruction (opcode <code><em>6</em></code>) works exactly like the <code>adv</code> instruction except that the result is stored in the <em><code>B</code> register</em>. (The numerator is still read from the <code>A</code> register.)</p>
+<p>The <code><em>cdv</em></code> instruction (opcode <code><em>7</em></code>) works exactly like the <code>adv</code> instruction except that the result is stored in the <em><code>C</code> register</em>. (The numerator is still read from the <code>A</code> register.)</p>
+<p>Here are some examples of instruction operation:</p>
+<ul>
+<li>If register <code>C</code> contains <code>9</code>, the program <code>2,6</code> would set register <code>B</code> to <code>1</code>.</li>
+<li>If register <code>A</code> contains <code>10</code>, the program <code>5,0,5,1,5,4</code> would output <code>0,1,2</code>.</li>
+<li>If register <code>A</code> contains <code>2024</code>, the program <code>0,1,5,4,3,0</code> would output <code>4,2,5,6,7,7,7,7,3,1,0</code> and leave <code>0</code> in register <code>A</code>.</li>
+<li>If register <code>B</code> contains <code>29</code>, the program <code>1,7</code> would set register <code>B</code> to <code>26</code>.</li>
+<li>If register <code>B</code> contains <code>2024</code> and register <code>C</code> contains <code>43690</code>, the program <code>4,0</code> would set register <code>B</code> to <code>44354</code>.</li>
+</ul>
+<p>The Historians' strange device has finished initializing its debugger and is displaying some <em>information about the program it is trying to run</em> (your puzzle input). For example:</p>
+<pre><code>Register A: 729
+Register B: 0
+Register C: 0
+
+Program: 0,1,5,4,3,0
+</code></pre>
+<p>Your first task is to <em>determine what the program is trying to output</em>. To do this, initialize the registers to the given values, then run the given program, collecting any output produced by <code>out</code> instructions. (Always join the values produced by <code>out</code> instructions with commas.) After the above program halts, its final output will be <code><em>4,6,3,5,6,3,5,2,1,0</em></code>.</p>
+<p>Using the information provided by the debugger, initialize the registers to the given values, then run the program. Once it halts, <em>what do you get if you use commas to join the values it output into a single string?</em></p>
