@@ -7,7 +7,7 @@ My poorly coded\*, all javascript solutions to [Advent of Code](https://adventof
 - [`01` ⭐⭐](./2025/01)
 - [`02` ⭐⭐](./2025/02)
 - [`03` ⭐⭐](./2025/03)
-- `04`
+- [`04` ⭐⭐](./2025/04)
 - `05`
 - `06`
 - `07`
