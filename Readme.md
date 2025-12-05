@@ -8,7 +8,7 @@ My poorly coded\*, all javascript solutions to [Advent of Code](https://adventof
 - [`02` ⭐⭐](./2025/02)
 - [`03` ⭐⭐](./2025/03)
 - [`04` ⭐⭐](./2025/04)
-- `05`
+- [`05` ⭐⭐](./2025/05)
 - `06`
 - `07`
 - `08`
