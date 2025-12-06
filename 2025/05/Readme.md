@@ -27,3 +27,14 @@
 </ul>
 <p>So, in this example, <em><code>3</code></em> of the available ingredient IDs are fresh.</p>
 <p>Process the database file from the new inventory management system. <em>How many of the available ingredient IDs are fresh?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>The Elves start bringing their spoiled inventory to the trash chute at the back of the kitchen.</p>
+<p>So that they can stop bugging you when they get new inventory, the Elves would like to know <em>all</em> of the IDs that the <em>fresh ingredient ID ranges</em> consider to be <em>fresh</em>. An ingredient ID is still considered fresh if it is in any range.</p>
+<p>Now, the second section of the database (the available ingredient IDs) is irrelevant. Here are the fresh ingredient ID ranges from the above example:</p>
+<pre><code>3-5
+10-14
+16-20
+12-18
+</code></pre>
+<p>The ingredient IDs that these ranges consider to be fresh are <code>3</code>, <code>4</code>, <code>5</code>, <code>10</code>, <code>11</code>, <code>12</code>, <code>13</code>, <code>14</code>, <code>15</code>, <code>16</code>, <code>17</code>, <code>18</code>, <code>19</code>, and <code>20</code>. So, in this example, the fresh ingredient ID ranges consider a total of <em><code>14</code></em> ingredient IDs to be fresh.</p>
+<p>Process the database file again. <em>How many ingredient IDs are considered to be fresh according to the fresh ingredient ID ranges?</em></p>
