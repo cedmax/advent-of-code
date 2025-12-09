@@ -1,0 +1,40 @@
+<h2>--- Day 8: Playground ---</h2><p>Equipped with a new understanding of teleporter maintenance, you confidently step onto the repaired teleporter pad.</p>
+<p>You rematerialize on an unfamiliar teleporter pad and find yourself in a vast underground space which contains a giant playground!</p>
+<p>Across the playground, a group of Elves are working on setting up an ambitious Christmas decoration project. Through careful rigging, they have suspended a large number of small electrical <a href="https://en.wikipedia.org/wiki/Junction_box" target="_blank">junction boxes</a>.</p>
+<p>Their plan is to connect the junction boxes with long strings of lights. Most of the junction boxes don't provide electricity; however, when two junction boxes are connected by a string of lights, electricity can pass between those two junction boxes.</p>
+<p>The Elves are trying to figure out <em>which junction boxes to connect</em> so that electricity can reach <em>every</em> junction box. They even have a list of all of the junction boxes' positions in 3D space (your puzzle input).</p>
+<p>For example:</p>
+<pre><code>162,817,812
+57,618,57
+906,360,560
+592,479,940
+352,342,300
+466,668,158
+542,29,236
+431,825,988
+739,650,466
+52,470,668
+216,146,977
+819,987,18
+117,168,530
+805,96,715
+346,949,466
+970,615,88
+941,993,340
+862,61,35
+984,92,344
+425,690,689
+</code></pre>
+<p>This list describes the position of 20 junction boxes, one per line. Each position is given as <code>X,Y,Z</code> coordinates. So, the first junction box in the list is at <code>X=162</code>, <code>Y=817</code>, <code>Z=812</code>.</p>
+<p>To save on string lights, the Elves would like to focus on connecting pairs of junction boxes that are <em>as close together as possible</em> according to <a href="https://en.wikipedia.org/wiki/Euclidean_distance" target="_blank">straight-line distance</a>. In this example, the two junction boxes which are closest together are <code>162,817,812</code> and <code>425,690,689</code>.</p>
+<p>By connecting these two junction boxes together, because electricity can flow between them, they become part of the same <em>circuit</em>. After connecting them, there is a single circuit which contains two junction boxes, and the remaining 18 junction boxes remain in their own individual circuits.</p>
+<p>Now, the two junction boxes which are closest together but aren't already directly connected are <code>162,817,812</code> and <code>431,825,988</code>. After connecting them, since <code>162,817,812</code> is already connected to another junction box, there is now a single circuit which contains <em>three</em> junction boxes and an additional 17 circuits which contain one junction box each.</p>
+<p>The next two junction boxes to connect are <code>906,360,560</code> and <code>805,96,715</code>. After connecting them, there is a circuit containing 3 junction boxes, a circuit containing 2 junction boxes, and 15 circuits which contain one junction box each.</p>
+<p>The next two junction boxes are <code>431,825,988</code> and <code>425,690,689</code>. Because these two junction boxes were <em>already in the same circuit</em>, nothing happens!</p>
+<p>This process continues for a while, and the Elves are concerned that they don't have enough extension cables for all these circuits. They would like to know how big the circuits will be.</p>
+<p>After making the ten shortest connections, there are 11 circuits: one circuit which contains <em>5</em> junction boxes, one circuit which contains <em>4</em> junction boxes, two circuits which contain <em>2</em> junction boxes each, and seven circuits which each contain a single junction box. Multiplying together the sizes of the three largest circuits (5, 4, and one of the circuits of size 2) produces <code><em>40</em></code>.</p>
+<p>Your list contains many junction boxes; connect together the <em>1000</em> pairs of junction boxes which are closest together. Afterward, <em>what do you get if you multiply together the sizes of the three largest circuits?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>The Elves were right; they <em>definitely</em> don't have enough extension cables. You'll need to keep connecting junction boxes together until they're all in <em>one large circuit</em>.</p>
+<p>Continuing the above example, the first connection which causes all of the junction boxes to form a single circuit is between the junction boxes at <code>216,146,977</code> and <code>117,168,530</code>. The Elves need to know how far those junction boxes are from the wall so they can pick the right extension cable; multiplying the X coordinates of those two junction boxes (<code>216</code> and <code>117</code>) produces <code><em>25272</em></code>.</p>
+<p>Continue connecting the closest unconnected pairs of junction boxes together until they're <span title="I strongly recommend making an interactive visualizer for this one; it reminds me a lot of maps from futuristic space games.">all in the same circuit</span>. <em>What do you get if you multiply together the X coordinates of the last two junction boxes you need to connect?</em></p>
