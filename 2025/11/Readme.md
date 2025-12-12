@@ -27,3 +27,33 @@ iii: out
 </ul>
 <p>In total, there are <code><em>5</em></code> different paths leading from <code>you</code> to <code>out</code>.</p>
 <p><em>How many different paths lead from <code>you</code> to <code>out</code>?</em></p>
+
+<h2 id="part2">--- Part Two ---</h2><p>Thanks in part to your analysis, the Elves have figured out a little bit about the issue. They now know that the problematic data path passes through both <code>dac</code> (a <a href="https://en.wikipedia.org/wiki/Digital-to-analog_converter" target="_blank">digital-to-analog converter</a>) and <code>fft</code> (a device which performs a <a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform" target="_blank">fast Fourier transform</a>).</p>
+<p>They're still not sure which specific path is the problem, and so they now need you to find every path from <code>svr</code> (the server rack) to <code>out</code>. However, the paths you find must all also visit both <code>dac</code> <em>and</em> <code>fft</code> (in any order).</p>
+<p>For example:</p>
+<pre><code>svr: aaa bbb
+aaa: fft
+fft: ccc
+bbb: tty
+tty: ccc
+ccc: ddd eee
+ddd: hub
+hub: fff
+eee: dac
+dac: fff
+fff: ggg hhh
+ggg: out
+hhh: out
+</code></pre>
+<p>This new list of devices contains many paths from <code>svr</code> to <code>out</code>:</p>
+<pre><code>svr,aaa,<em>fft</em>,ccc,ddd,hub,fff,ggg,out
+svr,aaa,<em>fft</em>,ccc,ddd,hub,fff,hhh,out
+svr,aaa,<em>fft</em>,ccc,eee,<em>dac</em>,fff,ggg,out
+svr,aaa,<em>fft</em>,ccc,eee,<em>dac</em>,fff,hhh,out
+svr,bbb,tty,ccc,ddd,hub,fff,ggg,out
+svr,bbb,tty,ccc,ddd,hub,fff,hhh,out
+svr,bbb,tty,ccc,eee,<em>dac</em>,fff,ggg,out
+svr,bbb,tty,ccc,eee,<em>dac</em>,fff,hhh,out
+</code></pre>
+<p>However, only <em><code>2</code></em> paths from <code>svr</code> to <code>out</code> visit both <code>dac</code> and <code>fft</code>.</p>
+<p>Find all of the paths that lead from <code>svr</code> to <code>out</code>. <em>How many of those paths visit both <code>dac</code> and <code>fft</code>?</em></p>
